@@ -1,0 +1,63 @@
+$basicColor : #1E1E1E;
+$basicWcolor : #F8F8F8;
+$activeColor : #999999;
+$miniColor : #EDE5D8;
+$darkColor : #272B28;
+$fontbasic : "Noto Sans KR";
+$enfont: "Roboto";
+
+header {
+
+  .gnb_btn {
+    width: 35px;
+    height: 25px;
+    background: transparent;
+    border: 0;
+    position: relative;
+
+    i {
+      position: absolute;
+      z-index: 1000;
+      background-color: $basicColor;
+      display: block;
+      width: 100%;
+      height: 2px;
+      transition: 0.5s;
+
+
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+      }
+
+    }
+
+    &.act {
+      i {
+        &:nth-child(1) {
+          top: 50%;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          top: 50%;
+          transform: rotate(-45deg);
+        }
+      }
+
+    }
+  }
+
+}

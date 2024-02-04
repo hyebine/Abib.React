@@ -1,0 +1,187 @@
+{
+  "hd": {
+    "mini": [
+      {
+        "txt": "공식 홈페이지 단독 KIT 최대 45% 할인 *일부 KIT 무료배송",
+        "href": ""
+      }
+    ],
+    "navi": {
+      "gnb": [
+        {
+          "nm": "BRAND",
+          "href": "#",
+          "sub": [
+            {
+              "nm": "브랜드",
+              "href": "#"
+            },
+            {
+              "nm": "콜라보레이션",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "nm": "PRODUCT",
+          "href": "#",
+          "sub": [
+            {
+              "nm": "스킨케어",
+              "href": "#"
+            },
+            {
+              "nm": "에센스",
+              "href": "#"
+            },
+            {
+              "nm": "패드",
+              "href": "#"
+            },
+            {
+              "nm": "마스크팩",
+              "href": "#"
+            },
+            {
+              "nm": "클랜저",
+              "href": "#"
+            },
+            {
+              "nm": "선케어",
+              "href": "#"
+            },
+            {
+              "nm": "바디케어",
+              "href": "#"
+            },
+            {
+              "nm": "파운데이션",
+              "href": "#"
+            },
+            {
+              "nm": "립",
+              "href": "#"
+            },
+            {
+              "nm": "세트",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "nm": "EVENT",
+          "href": "#",
+          "sub": []
+        },
+        {
+          "nm": "REVIEW",
+          "href": "#",
+          "sub": []
+        },
+        {
+          "nm": "MEMBERSHIP",
+          "href": "#",
+          "sub": []
+        }
+      ]
+    }
+  },
+  "swiper": {
+    "main": [
+      {
+        "id": "1",
+        "title": "Promotion Gift",
+        "txt": "프로모션 기간 동안 구매시, | 1월 미니멀 기프트를 증정",
+        "day": "2024.01.01 ~ 01.26",
+        "bg": "/img/",
+        "href": "#"
+      },
+      {
+        "id": "2",
+        "title": "이벤트 30% OFF",
+        "txt": "탄력 & 영양케어 제품 최대 30% 할인 이벤트",
+        "day": "2024.01.01 ~ 01.26",
+        "bg": "/img/",
+        "href": "#"
+      },
+      {
+        "id": "3",
+        "title": "포토리뷰 이벤트",
+        "txt": "프로모션 기간 동안 구매시, | 1월 미니멀 기프트를 증정",
+        "day": "2024.01.01 ~ 01.26",
+        "bg": "/img/",
+        "href": "#"
+      },
+      {
+        "id": "4",
+        "title": "선착순 구매 인증 이벤트",
+        "txt": "매주 구매 인증을 해주시는 고객님들께 | 선착순 50분께 ‘어성초 토너’를 증정",
+        "day": "2024.01.01 ~ 01.26",
+        "bg": "/img/",
+        "href": "#"
+      }
+    ]
+  },
+  "category": [
+    {
+      "nm": "SALE",
+      "href": "#",
+      "bg": "/img/"
+    },
+    {
+      "nm": "SET",
+      "href": "#",
+      "bg": "/img/"
+    },
+    {
+      "nm": "SHEET MASK",
+      "href": "#",
+      "bg": "/img/"
+    },
+    {
+      "nm": "SKINCARE",
+      "href": "#",
+      "bg": "/img/"
+    },
+    {
+      "nm": "SUNCARE",
+      "href": "#",
+      "bg": "/img/"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "title": "콜라겐 아이패치부활초 젤리",
+      "txt": "Collagen eye patch Jericho rose jelly",
+      "href" : "#",
+      "bg": "/img/",
+      "bg2": "/img/"
+    },
+    {
+      "id": "2",
+      "title": "약산성 시트 마스크부활초 핏",
+      "txt": "Mild acidic pH sheet mask Jericho rose fit",
+      "href" : "#",
+      "bg": "/img/",
+      "bg2": "/img/"
+    },
+    {
+      "id": "3",
+      "title": "부활초 크림뉴트리션 튜브",
+      "txt": "Jericho rose crème Nutrition tube",
+      "href" : "#",
+      "bg": "/img/",
+      "bg2": "/img/"
+    }
+  ],
+  "brandstory": [
+    {
+      "title": "BRAND STORY",
+      "txt": "Meet with the first moon.",
+      "content": "'첫번째 달'이라는 뜻의 아비브는 | 미의 순환과정의 출발점에서 가장 완벽하고 순수한 제품을 | 완성 시키고자 합니다.",
+      "href": "#",
+      "bg": "/img/"
+    }
+  ]
+}
