@@ -1,0 +1,108 @@
+$basicColor : #1E1E1E;
+$basicWcolor : #F8F8F8;
+$activeColor : #999999;
+$miniColor : #EDE5D8;
+$darkColor : #272B28;
+$fontbasic : "Noto Sans KR";
+$enfont: "Roboto";
+
+.banner {
+
+  height: 100vw;
+
+  @media (max-width:1280px) {
+    height: 70vw;
+  }
+
+
+  @media (max-width:991px) {
+    height: 100vw;
+  }
+
+
+  @media (min-width:1280px) {
+    max-height: 680px;
+  }
+
+  .btn {
+    bottom: 165px;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @media (max-width:1280px) {
+      bottom: 10vw;
+    }
+
+    @media (max-width:991px) {
+
+      justify-content: center;
+    }
+
+
+    svg {
+      path {
+        fill: white !important;
+      }
+    }
+
+  }
+}
+
+
+
+.bannerSlide {
+  height: 100%;
+
+  .bgcontent {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (max-width:1280px) {
+      
+      background-size: auto 100% !important;
+
+
+    }
+  }
+
+  .content {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    line-height: 3;
+
+    @media (max-width:1280px) {
+      line-height: 2.5;
+
+    }
+
+    h2,
+    p {
+      color: $basicWcolor;
+    }
+
+    h2 {
+      font-size: 90px;
+      letter-spacing: -6px;
+
+      @media (max-width:1280px) {
+        font-size: 6vw;
+        letter-spacing: 0;
+
+      }
+    }
+
+    p {
+      font-size: 35px;
+
+      @media (max-width:1280px) {
+        font-size: 3vw;
+      }
+    }
+
+  }
+}

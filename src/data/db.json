@@ -3,7 +3,7 @@
     "mini": [
       {
         "txt": "공식 홈페이지 단독 KIT 최대 45% 할인 *일부 KIT 무료배송",
-        "href": ""
+        "href": "#"
       }
     ],
     "navi": {
@@ -90,34 +90,34 @@
     "main": [
       {
         "id": "1",
-        "title": "Promotion Gift",
-        "txt": "프로모션 기간 동안 구매시, | 1월 미니멀 기프트를 증정",
+        "title": "선착순 구매 인증 이벤트",
+        "txt": "매주 구매 인증을 해주시는 고객님들께 | 선착순 50분께 ‘어성초 토너’를 증정",
         "day": "2024.01.01 ~ 01.26",
-        "bg": "/img/",
+        "bg": "/img/banner1.jpg",
         "href": "#"
       },
       {
         "id": "2",
-        "title": "이벤트 30% OFF",
-        "txt": "탄력 & 영양케어 제품 최대 30% 할인 이벤트",
+        "title": "포토리뷰 이벤트",
+        "txt": "프로모션 기간 동안 구매시, | 1월 미니멀 기프트를 증정",
         "day": "2024.01.01 ~ 01.26",
-        "bg": "/img/",
+        "bg": "/img/banner2.jpg",
         "href": "#"
       },
       {
         "id": "3",
-        "title": "포토리뷰 이벤트",
-        "txt": "프로모션 기간 동안 구매시, | 1월 미니멀 기프트를 증정",
+        "title": "이벤트 30% OFF",
+        "txt": "탄력 & 영양케어 제품 최대 30% 할인 이벤트",
         "day": "2024.01.01 ~ 01.26",
-        "bg": "/img/",
+        "bg": "/img/banner3.jpg",
         "href": "#"
       },
       {
         "id": "4",
-        "title": "선착순 구매 인증 이벤트",
-        "txt": "매주 구매 인증을 해주시는 고객님들께 | 선착순 50분께 ‘어성초 토너’를 증정",
+        "title": "Promotion Gift",
+        "txt": "프로모션 기간 동안 구매시, | 1월 미니멀 기프트를 증정",
         "day": "2024.01.01 ~ 01.26",
-        "bg": "/img/",
+        "bg": "/img/banner4.jpg",
         "href": "#"
       }
     ]
@@ -154,7 +154,7 @@
       "id": "1",
       "title": "콜라겐 아이패치부활초 젤리",
       "txt": "Collagen eye patch Jericho rose jelly",
-      "href" : "#",
+      "href": "#",
       "bg": "/img/",
       "bg2": "/img/"
     },
@@ -162,7 +162,7 @@
       "id": "2",
       "title": "약산성 시트 마스크부활초 핏",
       "txt": "Mild acidic pH sheet mask Jericho rose fit",
-      "href" : "#",
+      "href": "#",
       "bg": "/img/",
       "bg2": "/img/"
     },
@@ -170,7 +170,7 @@
       "id": "3",
       "title": "부활초 크림뉴트리션 튜브",
       "txt": "Jericho rose crème Nutrition tube",
-      "href" : "#",
+      "href": "#",
       "bg": "/img/",
       "bg2": "/img/"
     }

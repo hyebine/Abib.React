@@ -6,4 +6,38 @@ $darkColor : #272B28;
 $fontbasic : "Noto Sans KR";
 $enfont: "Roboto";
 
+* a {
+  text-decoration: none;
+  color: $basicColor;
+}
 
+body {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  li,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+  }
+}
+
+.w-0 {
+  width: 0;
+  white-space: nowrap;
+}
+
+.zup {
+  z-index: 10000;
+}
