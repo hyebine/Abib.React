@@ -7,43 +7,30 @@ $fontbasic : "Noto Sans KR";
 $enfont: "Roboto";
 
 .banner {
-
   height: 100vw;
-
-  @media (max-width:1280px) {
-    height: 70vw;
-  }
-
-
-  @media (max-width:991px) {
-    height: 100vw;
-  }
-
 
   @media (min-width:1280px) {
     max-height: 680px;
   }
 
+
+
+
+  // pagination
+
   .btn {
-    bottom: 165px;
-    z-index: 1000;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
 
-    @media (max-width:1280px) {
+
+    @media (max-width:990px) {
       bottom: 10vw;
-    }
-
-    @media (max-width:991px) {
-
       justify-content: center;
+
     }
 
 
     svg {
       path {
-        fill: white !important;
+        fill: $basicWcolor !important;
       }
     }
 
@@ -51,21 +38,24 @@ $enfont: "Roboto";
 }
 
 
+// bg
 
 .bannerSlide {
   height: 100%;
 
   .bgcontent {
-    height: 100%;
-    background-repeat: no-repeat;
+    height: 90vw;
+    max-height: 800px;
+    background-size: auto 100%;
     background-position: center;
+    background-repeat: no-repeat;
 
-    @media (max-width:1280px) {
-      
-      background-size: auto 100% !important;
 
+    @media (min-width:1024px) {
+      height: 800px;
 
     }
+
   }
 
   .content {
@@ -73,23 +63,22 @@ $enfont: "Roboto";
     transform: translateY(-50%);
     left: 0;
     right: 0;
-    line-height: 3;
+ 
 
-    @media (max-width:1280px) {
-      line-height: 2.5;
-
-    }
-
-    h2,
+    h3,
     p {
       color: $basicWcolor;
     }
 
-    h2 {
-      font-size: 90px;
+    h3 {
+      font-size: 50px;
+      font-weight: 500;
       letter-spacing: -6px;
+      // transform: translateY(-80%);
+      // opacity: 0;
+      transition: 0.5s;
 
-      @media (max-width:1280px) {
+      @media (max-width:990px) {
         font-size: 6vw;
         letter-spacing: 0;
 
@@ -97,12 +86,51 @@ $enfont: "Roboto";
     }
 
     p {
-      font-size: 35px;
+      font-size: 1rem;
+      font-weight: 300;
+      // transform: translateY(80%);
+      // opacity: 0;
+      transition: 0.5s;
 
-      @media (max-width:1280px) {
-        font-size: 3vw;
+
+      @media (max-width:990px) {
+        font-size: 2vw;
       }
+
+
+
+      &:first-of-type {
+        font-size: 18px;
+        margin: 2rem 0;
+      }
+
+
+      &:last-of-type {
+        font-size: 17px;
+        margin-bottom: 3rem;
+      }
+    }
+
+
+    a {
+      font-size: 20px;
+      font-weight: 200;
+      color: $basicWcolor;
+      padding: 0.5rem 3rem;
+      border: 1.2px solid $basicWcolor;
+
+
+      @media (max-width:990px) {
+        font-size: 2vw;
+      }
+
+
+      &:hover {
+        background-color: rgba($basicWcolor, $alpha: 0.2);
+      }
+
     }
 
   }
 }
+
