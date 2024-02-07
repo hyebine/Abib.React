@@ -39,6 +39,12 @@ header {
 
     .navi {
 
+      @media (max-width:990px) {
+        display: flex;
+        align-items: start;
+
+      }
+
       .gnb {
 
         @media (max-width:990px) {
@@ -46,7 +52,16 @@ header {
           left: 0;
           right: 0;
           top: 100%;
+
+          display: none;
+          flex-direction: column;
+          width: 100%;
         }
+
+        &.act{
+          display: flex;
+        }
+
 
         @media (min-width:991px) {
           &::before {
@@ -102,12 +117,7 @@ header {
             opacity: 0;
             visibility: hidden;
 
-            @media (max-width:990px) {
-
-              &.act {}
-
-            }
-
+          
 
             li {
 
@@ -161,8 +171,7 @@ header {
     height: 24px;
     background: transparent;
     border: 0;
-
-
+  
 
     i {
       position: absolute;

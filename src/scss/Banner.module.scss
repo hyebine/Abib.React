@@ -7,11 +7,11 @@ $fontbasic : "Noto Sans KR";
 $enfont: "Roboto";
 
 .banner {
-  height: 100vw;
+  // height: 100vw;
 
-  @media (min-width:1280px) {
-    max-height: 680px;
-  }
+  // @media (min-width:1280px) {
+  //   max-height: 680px;
+  // }
 
 
 
@@ -63,7 +63,7 @@ $enfont: "Roboto";
     transform: translateY(-50%);
     left: 0;
     right: 0;
- 
+
 
     h3,
     p {
@@ -73,7 +73,7 @@ $enfont: "Roboto";
     h3 {
       font-size: 50px;
       font-weight: 500;
-      letter-spacing: -6px;
+      // letter-spacing: -6px;
       // transform: translateY(-80%);
       // opacity: 0;
       transition: 0.5s;
@@ -133,4 +133,3 @@ $enfont: "Roboto";
 
   }
 }
-

@@ -44,10 +44,7 @@ function Header(props) {
 
         <div className='navi d-lg-flex ms-auto ms-lg-0 flex-lg-grow-1 justify-content-between'>
 
-
-
-
-          <ul className={`gnb d-none d-lg-flex flex-grow-1  justify-content-center ${toggle && 'act'} `}>
+          <ul className={`gnb d-lg-flex flex-grow-1 justify-content-center ${toggle && 'act'} `}>
             {
               props.datasrc.navi.gnb.map((el, idx) => {
                 return (

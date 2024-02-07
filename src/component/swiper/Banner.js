@@ -15,7 +15,7 @@ function Banner(props) {
   return (
 
 
-    <div className={`chbswiper ${MainStyle.banner} ${props}`} >
+    <div className={`chbswiper ${MainStyle.banner} ${props.className}`} >
 
       <Swiper
         className='position-relative'
@@ -36,22 +36,24 @@ function Banner(props) {
 
       >
         {
-          props.swiperData.map((el, idx) =>
+          props.swiperData.map((el, i) =>
           (
-            <SwiperSlide className={MainStyle.bannerSlide} key={idx}>
+            <SwiperSlide className={MainStyle.bannerSlide} key={el.id}>
               <div
-                className={MainStyle.bgcontent} style={{
+                className={`${MainStyle.bgcontent} banner_${i}`} style={{
                   backgroundImage: `url(${el.bg})`
 
                 }}>
-                <div className={`${MainStyle.content} position-absolute container mx-auto text-center text-lg-start pt-5 pt-lg-0 `}>
-                  <h3 className='mt-5 mt-lg-0'>{el.title}
+                <div className={`${MainStyle.content}
+                chb_ctt position-absolute container mx-auto text-center text-lg-start pt-5 pt-lg-0 `}>
+                  <h3 className='mt-5 mt-lg-0'>
+                    {el.title}
                   </h3>
                   <p>
-                    {el.txt.split('|').map((e) =>
-                      <>
+                    {el.txt.split('|').map((e, index) =>
+                      <React.Fragment key={index}>
                         {e}<br />
-                      </>
+                      </React.Fragment>
                     )}
                   </p>
                   <p>{el.day}</p>
@@ -65,7 +67,7 @@ function Banner(props) {
       </Swiper>
 
 
-      <div className={`${MainStyle.btn} container  buttonright`}>
+      <div className={`${MainStyle.btn} container buttonright`}>
         <div className="pagination"></div>
       </div>
 

@@ -44,44 +44,105 @@ body {
 }
 
 
-.swiper-slide.swiper-slide-active {
-  .content {
-    h3 {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    p {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-}
-
-
-.content {
-  h3 {
-    transform: translateY(80%);
-    opacity: 0;
-  }
-
-  p {
-    transform: translateY(80%);
-    opacity: 0;
-  }
-}
-
-
+// 텍스트 애니메이션
 
 
 .chbswiper {
 
 
-  .swiper {
-    position: relative;
+  .swiper-slide.swiper-slide-active {
+    .chb_ctt {
+      h3 {
+        transform: translateY(0);
+        opacity: 1;
+      }
 
-
+      p {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
+
+
+  .chb_ctt {
+    h3 {
+      transform: translateY(-70%);
+      opacity: 0;
+    }
+
+    p {
+      transform: translateY(70%);
+      opacity: 0;
+    }
+  }
+
+
+}
+
+
+
+.chbswiper {
+
+  position: relative;
+
+  // .swiper {
+  //   position: relative;
+
+
+  // }
+
+
+
+
+  // 배너 텍스트 색 변경
+
+  .banner_0 {
+
+    .chb_ctt {
+
+      h3,
+      p,
+      a {
+        color: $basicColor;
+      }
+
+      a {
+        font-size: 20px;
+        font-weight: 200;
+        color: $basicColor;
+        padding: 0.5rem 3rem;
+        border: 1.2px solid $basicColor;
+
+        &:hover {
+          background-color: rgba($basicColor, $alpha: 0.2);
+          color: $basicWcolor ;
+        }
+      }
+
+      @media (max-width:990px) {
+
+        h3,
+        p,
+        a {
+          color: $basicWcolor;
+        }
+
+        a {
+          font-size: 2vw;
+          color: $basicWcolor;
+          border: 1.2px solid $basicWcolor;
+
+          &:hover {
+            background-color: rgba($basicWcolor, $alpha: 0.2);
+
+          }
+        }
+      }
+
+    }
+  }
+
 
   .container.buttonright {
     display: flex;
@@ -94,8 +155,8 @@ body {
     align-items: center;
     position: absolute;
     bottom: 0;
-    z-index: 10000;
-    
+    z-index: 1000;
+
 
     .swiper-pagination-bullets {
       flex-direction: column;

@@ -126,27 +126,27 @@
     {
       "nm": "SALE",
       "href": "#",
-      "bg": "/img/"
+      "bg": "/img/SALE.jpg"
     },
     {
       "nm": "SET",
       "href": "#",
-      "bg": "/img/"
+      "bg": "/img/SET.jpg"
     },
     {
       "nm": "SHEET MASK",
       "href": "#",
-      "bg": "/img/"
+      "bg": "/img/SHEETMASK.jpg"
     },
     {
       "nm": "SKINCARE",
       "href": "#",
-      "bg": "/img/"
+      "bg": "/img/SKINCARE.jpg"
     },
     {
       "nm": "SUNCARE",
       "href": "#",
-      "bg": "/img/"
+      "bg": "/img/SUNCARE.jpg"
     }
   ],
   "products": [
