@@ -7,9 +7,33 @@ $fontbasic : "Noto Sans KR";
 $enfont: "Roboto";
 
 
+
+// 스크롤 내릴 때 
+
+.scroll {
+  background-color: rgba($basicWcolor, $alpha: 0.5);
+  border-bottom: 1px solid $basicColor;
+
+  .adtop {
+    margin-top: -32px;
+    transition: 0.5s;
+  }
+
+  .menu_a {
+    color: $activeColor !important;
+    line-height: 70px !important;
+
+    &:hover {
+      color: $basicColor !important;
+    }
+  }
+
+}
+
 header {
   &:hover {
     background-color: rgba($basicWcolor, $alpha: 0.5);
+    border-bottom: 1px solid $basicColor ;
   }
 
   border-bottom: 1px solid $basicWcolor;
@@ -58,7 +82,7 @@ header {
           width: 100%;
         }
 
-        &.act{
+        &.act {
           display: flex;
         }
 
@@ -117,7 +141,7 @@ header {
             opacity: 0;
             visibility: hidden;
 
-          
+
 
             li {
 
@@ -171,7 +195,7 @@ header {
     height: 24px;
     background: transparent;
     border: 0;
-  
+
 
     i {
       position: absolute;

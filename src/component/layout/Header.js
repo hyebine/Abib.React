@@ -8,24 +8,40 @@ import '../../scss/Header.scss'
 function Header(props) {
 
   const [toggle, setToggle] = useState(false);
+  const [scrollHd, setScrollHd] = useState(false);
 
 
   useEffect(() => {
+  
+    const handleScroll = () => {
+      setScrollHd(window.scrollY > 80);
+    };
+
+    // 2단메뉴
     const submenuli = document.querySelectorAll(".submenuis");
     const gnb = document.querySelector(".navi .gnb")
-    submenuli.forEach((ele, idx) => {
+
+    submenuli.forEach((ele) => {
       ele.addEventListener('mouseenter', () => {
         gnb.classList.add("showback")
       })
       ele.addEventListener('mouseleave', () => {
         gnb.classList.remove("showback")
-      })
+      });
+    });
 
-    })
-  }, [])
+// 스크롤 이벤트
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+  }, []);
+
+
 
   return (
-    <header className='fixed-top'>
+    <header className={`fixed-top ${scrollHd ? 'scroll' : ''}`}>
 
       <div className='adtop text-center py-1'>
         <Link to={`/${props.datasrc.mini[0].href}`}>
@@ -33,7 +49,7 @@ function Header(props) {
         </Link>
       </div>
 
-      <div className='hd container d-flex align-items-center justify-content-between '>
+      <div className={`hd container d-flex align-items-center justify-content-between `} >
         <h1 className='logo w-0 position-relative zup'><Link to="/" className='d-block'><img src="/img/logo.png" alt="로고이미지" className='d-block' /></Link></h1>
 
         <button className={`gnb_btn position-relative d-lg-none ${toggle && 'act'} order-3`} onClick={() => { setToggle(!toggle) }}>
