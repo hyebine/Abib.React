@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Title } from '../../styled/common'
-import '../../scss/Category.scss'
+import '../../scss/category.scss'
 
 function Categorycom(props) {
 
@@ -18,7 +18,6 @@ function Categorycom(props) {
                 backgroundImage: `url(${e.bg})`
               }}></Link>
               <strong className='position-absolute'>{e.nm}</strong>
-              <span></span>
             </li>
 
           ))

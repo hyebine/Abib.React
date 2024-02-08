@@ -5,12 +5,15 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './component/layout/Header';
 import SwiperBanner from './component/swiper/Banner'
 import Categorycom from './component/product/Category'
+import Best from './component/product/BestProduct'
+import Brand from './component/main/Brand'
+import Sns from './component/main/Instagram'
 
 // data
 import db from './data/db.json'
 // css
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './scss/Style.scss'
+import './scss/style.scss'
 
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
           <>
             <SwiperBanner swiperData={db.swiper.main}></SwiperBanner>
             <Categorycom categoryData={db.category} ></Categorycom>
+            <Best bestData={db.products}></Best>
+            <Brand brandData={db.brandstory}></Brand>
+            <Sns></Sns>
           </>
         }></Route>
       </Routes>

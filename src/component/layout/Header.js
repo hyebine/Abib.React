@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BsPerson, BsSearch } from "react-icons/bs";
 
-import '../../scss/Header.scss'
+import '../../scss/header.scss'
 
 
 function Header(props) {

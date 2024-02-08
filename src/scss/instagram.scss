@@ -1,0 +1,86 @@
+$basicColor : #1E1E1E;
+$basicWcolor : #F8F8F8;
+$activeColor : #999999;
+$miniColor : #EDE5D8;
+$darkColor : #272B28;
+
+
+.instagram {
+  margin-top: 170px;
+
+  .snsImg {
+
+    span {
+      display: inline-block;
+      position: relative;
+
+      &::after {
+        content: "\F415";
+        font-family: bootstrap-icons !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 10px;
+        z-index: 10000;
+        color: $basicWcolor;
+        opacity: 0;
+        transition: 0.5s;
+      }
+
+      img {
+        @media (max-width:990px) {
+          // height: 50vw;
+          max-height: 797px;
+        }
+
+        &:hover {
+          filter: brightness(0.5);
+
+        }
+      }
+
+      &:hover::after {
+        font-size: 50px;
+        opacity: 1;
+      }
+    }
+
+  }
+
+  .content {
+
+
+    @media (max-width:990px) {
+      text-align: center;
+      padding-top: 70px;
+    }
+
+    h3 {
+      font-size: 35px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      margin: 2rem 0 4rem;
+    }
+
+    a {
+      font-size: 15px;
+      font-weight: 300;
+      color: $basicColor;
+      padding: 0.5rem 3rem;
+      border: 1.2px solid $basicColor;
+
+      &:hover {
+        background-color: rgba($basicColor, $alpha: 0.2);
+        color: $basicWcolor ;
+      }
+    }
+
+
+
+  }
+}
