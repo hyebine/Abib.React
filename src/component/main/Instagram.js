@@ -10,12 +10,12 @@ function Instagram() {
       <div className='d-lg-flex justify-content-between w-100'>
 
         <div className='snsImg col-lg-8 d-flex align-items-center'>
-          <div className='col-md-6 pe-0'>
+          <div className='col-md-5 pe-0'>
             <span><img src="/img/IMG0.jpg" alt="사진" className='d-block img-fluid' /></span>
             <span><img src="/img/IMG1.jpg" alt="사진" className='d-block img-fluid' /></span>
           </div>
 
-          <div className='col-md-6 ps-2'>
+          <div className='col-md-6 ps-1'>
             <span><img src="/img/IMG2.jpg" alt="사진" className='img-fluid' /></span>
           </div>
         </div>

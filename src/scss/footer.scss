@@ -1,0 +1,129 @@
+$basicColor : #1E1E1E;
+$basicWcolor : #F8F8F8;
+$activeColor : #999999;
+$miniColor : #EDE5D8;
+$darkColor : #272B28;
+
+.ft {
+  color: $basicWcolor;
+  background-color: $basicColor;
+
+  .wrapper {
+
+    .content {
+
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 2rem;
+
+      @media (max-width:990px) {
+        margin: 0 auto;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      h3,
+      li,
+      p,
+      span,
+      a {
+        color: $basicWcolor;
+
+      }
+
+      h3 {
+        font-size: 15px;
+        font-weight: 500;
+        margin: 0;
+        padding: 1rem 0;
+
+      }
+
+      p {
+        margin: 0;
+      }
+
+      ul {
+        font-size: 12px;
+        font-weight: 200;
+      }
+
+      .icons {
+        width: 120px;
+
+        li {
+          width: 2rem;
+          height: 2rem;
+          border: 1px solid $basicWcolor;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 2.3;
+
+          a {
+            display: inline-block;
+
+            svg {
+
+              font-size: 1rem;
+
+              path {
+                color: $basicWcolor;
+              }
+            }
+          }
+        }
+
+      }
+
+
+      .ftConsult {
+
+        p {
+          &:first-of-type {
+            font-size: 17px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .ftCompany {
+        .ftInfo {
+          span {
+            font-weight: 500;
+
+          }
+        }
+      }
+
+      .ftLink {
+
+        margin-top: 2rem;
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+
+    }
+
+  }
+
+  .ftCopy {
+    font-size: 12px;
+    font-weight: 300;
+    border-top: 1px solid $activeColor;
+    color: $basicWcolor;
+
+    @media (max-width:990px) {
+      border-top: none;
+
+    }
+
+    b {
+      color: $basicWcolor;
+
+    }
+  }
+
+}

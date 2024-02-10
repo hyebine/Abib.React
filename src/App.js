@@ -8,6 +8,8 @@ import Categorycom from './component/product/Category'
 import Best from './component/product/BestProduct'
 import Brand from './component/main/Brand'
 import Sns from './component/main/Instagram'
+import Apply from './component/main/Form'
+import Footer from './component/layout/Footer'
 
 // data
 import db from './data/db.json'
@@ -28,6 +30,8 @@ function App() {
             <Best bestData={db.products}></Best>
             <Brand brandData={db.brandstory}></Brand>
             <Sns></Sns>
+            <Apply></Apply>
+            <Footer></Footer>
           </>
         }></Route>
       </Routes>

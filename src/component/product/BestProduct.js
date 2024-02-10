@@ -17,10 +17,11 @@ function BestProduct(props) {
                 style={{
                   backgroundImage: `url(${e.bg})`
                 }}>
-                <span className='d-block h-100' style={{
-                  backgroundImage: `url(${e.bg2})`,
-
-                }}></span>
+                <span className='d-block h-100'
+                  style={{
+                    backgroundImage: `url(${e.bg2})`
+                  }}>
+                </span>
               </Link>
               <p className='mt-4'>{e.title}</p>
               <span>{e.txt}</span>

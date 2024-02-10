@@ -14,6 +14,13 @@ $darkColor : #272B28;
       display: inline-block;
       position: relative;
 
+      @media (max-width:990px) {
+
+        &:last-child {
+          display: block;
+        }
+      }
+
       &::after {
         content: "\F415";
         font-family: bootstrap-icons !important;
@@ -80,7 +87,8 @@ $darkColor : #272B28;
       }
     }
 
-
-
   }
+
+
+
 }

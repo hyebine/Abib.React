@@ -12,7 +12,7 @@ function Header(props) {
 
 
   useEffect(() => {
-  
+
     const handleScroll = () => {
       setScrollHd(window.scrollY > 80);
     };
@@ -30,7 +30,7 @@ function Header(props) {
       });
     });
 
-// 스크롤 이벤트
+    // 스크롤 이벤트
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -90,20 +90,20 @@ function Header(props) {
           </ul>
 
           <ul className='box d-flex w-0 align-items-center justify-content-end'>
-            <li>
+            <li className='pe-3'>
               <Link to="/">
                 <span className='d-none d-lg-block'>JOIN</span>
               </Link>
             </li>
-            <li>
+            <li className='pe-3'>
               <Link to="/">
-                <BsPerson className='d-block d-lg-none' size={25} />
+                <BsPerson className='d-block d-lg-none' />
                 <span className='d-none d-lg-block'>LOGIN</span>
               </Link>
             </li>
-            <li>
+            <li className='pe-3 pe-lg-0'>
               <Link to="/">
-                <BsSearch className='d-block d-lg-none' size={23} />
+                <BsSearch className='d-block d-lg-none' />
                 <span className='d-none d-lg-block'>SEARCH</span>
               </Link>
             </li>

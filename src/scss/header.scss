@@ -166,10 +166,19 @@ header {
 
       .box {
         li {
-          padding-right: 1.5rem;
 
-          path {
-            color: $basicColor;
+
+          a {
+
+            svg {
+              width: 24px;
+              height: 24px;
+
+              path {
+                color: $basicColor;
+
+              }
+            }
           }
 
           span {

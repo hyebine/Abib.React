@@ -1,0 +1,115 @@
+$basicColor : #1E1E1E;
+$basicWcolor : #F8F8F8;
+$activeColor : #999999;
+$miniColor : #EDE5D8;
+$darkColor : #272B28;
+
+.apply {
+  margin-top: 170px;
+  background-color: #FAFAFA;
+  position: relative;
+
+
+  .wrapper {
+    h2 {
+      font-size: 40px;
+      font-weight: 400;
+      padding: 2rem 0;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid $basicColor;
+
+      strong {
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+
+
+    .content {
+      font-size: 16px;
+      font-weight: 400;
+      padding-bottom: 1rem;
+
+      label {
+        max-width: 100px;
+      }
+
+
+      input {
+        flex-grow: 1;
+        max-width: 200px;
+        outline: 0;
+        padding: 4px 10px;
+        border: 1px solid $activeColor;
+
+        &::placeholder {
+          color: $activeColor;
+          font-size: 12px;
+          font-weight: 300;
+        }
+
+      }
+
+      //Chrome, Safari, Edge, Opera 
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+
+
+      textarea {
+        max-width: 200px;
+
+        outline: 0;
+        padding: 4px 10px;
+        border: 1px solid $activeColor;
+        resize: none !important;
+
+
+        &::placeholder {
+          color: $activeColor;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+
+    }
+
+    .agree {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 3rem 0;
+
+      input {
+        accent-color: $basicColor;
+      }
+    }
+
+
+    button {
+      font-size: 15px;
+      font-weight: 300;
+      border: 0;
+      background-color: $activeColor ;
+      color: $basicWcolor;
+      cursor: pointer;
+      padding: .5rem 2rem;
+
+      margin-bottom: 5rem;
+
+      &:hover {
+        background-color: $basicColor;
+        transition: .5s;
+      }
+
+    }
+
+  }
+}
