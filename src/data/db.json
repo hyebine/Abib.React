@@ -10,11 +10,11 @@
       "gnb": [
         {
           "nm": "BRAND",
-          "href": "#",
+          "href": "#none",
           "sub": [
             {
               "nm": "브랜드",
-              "href": "#"
+              "href": "brand"
             },
             {
               "nm": "콜라보레이션",

@@ -39,9 +39,18 @@ function Header(props) {
   }, []);
 
 
+  const SubMenu = (idx) => {
+    const subUl = document.querySelector(`.sub${idx}`);
+    subUl && subUl.classList.toggle("act");
+  };
+
+
 
   return (
-    <header className={`fixed-top ${scrollHd ? 'scroll' : ''}`}>
+    <header
+      className={`fixed-top ${scrollHd ? 'scroll' : ''}`}
+      style={{ backgroundColor: toggle ? '#F8F8F8' : '' }}
+    >
 
       <div className='adtop text-center py-1'>
         <Link to={`/${props.datasrc.mini[0].href}`}>
@@ -64,13 +73,16 @@ function Header(props) {
             {
               props.datasrc.navi.gnb.map((el, idx) => {
                 return (
-                  <li className={`menu_li position-relative  ${el.sub.length > 0 ? 'submenuis' : ""}`} key={`gnb_${idx}`}>
+                  <li className={`menu_li position-relative 
+                  ${el.sub.length > 0 ? 'submenuis' : ""}`} key={idx}
+                    onClick={() => SubMenu(idx)}
+                  >
                     <Link to={`/${el.href}`} className='menu_a'>
                       {el.nm}
                     </Link>
                     {
                       el.sub.length > 0 &&
-                      <ul className='sub_ul zup position-absolute'>
+                      <ul className={`sub_ul sub${idx} zup position-absolute`}>
                         {
                           el.sub.map((eel, iidx) => {
                             return (
@@ -97,13 +109,13 @@ function Header(props) {
             </li>
             <li className='pe-3'>
               <Link to="/">
-                <BsPerson className='d-block d-lg-none' />
+                <BsPerson size={24} className='d-block d-lg-none' />
                 <span className='d-none d-lg-block'>LOGIN</span>
               </Link>
             </li>
             <li className='pe-3 pe-lg-0'>
               <Link to="/">
-                <BsSearch className='d-block d-lg-none' />
+                <BsSearch size={24} className='d-block d-lg-none' />
                 <span className='d-none d-lg-block'>SEARCH</span>
               </Link>
             </li>
@@ -111,7 +123,7 @@ function Header(props) {
 
         </div>
       </div>
-    </header>
+    </header >
   )
 }
 

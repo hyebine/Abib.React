@@ -11,6 +11,10 @@ import Sns from './component/main/Instagram'
 import Apply from './component/main/Form'
 import Footer from './component/layout/Footer'
 
+// page
+
+import BrandStory from './page/BrandStory'
+
 // data
 import db from './data/db.json'
 // css
@@ -33,10 +37,13 @@ function App() {
             <Apply></Apply>
             <Footer></Footer>
           </>
-        }></Route>
-      </Routes>
+        }>
+        </Route>
+        
+        <Route path='/brand' element={<BrandStory />}></Route>
+      </Routes >
 
-    </div>
+    </div >
   );
 }
 
