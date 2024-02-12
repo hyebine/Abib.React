@@ -1,0 +1,166 @@
+$basicColor : #1E1E1E;
+$basicWcolor : #F8F8F8;
+$activeColor : #999999;
+
+
+.hdBg {
+  max-height: 600px;
+  height: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .text {
+    padding-top: 13rem;
+    position: relative;
+
+    p {
+      color: $basicWcolor;
+      font-size: 1.5rem;
+      font-weight: 300;
+
+    }
+
+    span {
+      display: inline-block;
+      padding-top: 9rem;
+
+
+
+      path {
+        color: $basicWcolor;
+
+      }
+    }
+  }
+
+
+}
+
+.contnet {
+  .title {
+    padding: 8rem;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+
+
+    }
+  }
+
+  .coverBg {
+    height: 100vw;
+    max-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    margin-bottom: 100px;
+
+
+    @media (max-width:990px) {
+      max-height: 400px;
+      background-size: auto 100%;
+
+    }
+
+  }
+
+  .brandInfo01 {
+
+
+
+    background-position: right center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    padding: 15rem 0;
+
+
+    .line01 {
+      display: block;
+      border: 1px solid $basicColor;
+      width: 100%;
+    }
+
+
+  }
+
+  .brandInfo02 {
+    margin-bottom: 100px;
+    background-position: left center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    padding: 15rem 0;
+
+
+    .line02 {
+      display: block;
+      border: 1px solid $basicColor;
+      width: 100%;
+    }
+
+
+  }
+
+  .brandOnly {
+
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .brandTxt {
+    padding-top: 150px;
+
+
+    h4 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    ul {
+      line-height: 2;
+
+      li {
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+
+  }
+
+  .abibBg {
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: 40vw;
+
+
+
+    .content {
+
+      font-size: 1.5rem;
+      font-weight: 300;
+
+      @media (max-width:990px) {
+        font-size: 1rem;
+      }
+
+
+      p {
+        color: $basicWcolor;
+
+      }
+
+
+    }
+  }
+}

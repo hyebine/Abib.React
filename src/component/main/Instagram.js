@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import '../../scss/instagram.scss'
-
+import { GoHeartFill } from "react-icons/go";
 
 function Instagram() {
   return (
@@ -10,13 +9,22 @@ function Instagram() {
       <div className='d-lg-flex justify-content-between w-100'>
 
         <div className='snsImg col-lg-8 d-flex align-items-center'>
-          <div className='col-md-5 pe-0'>
-            <span><img src="/img/IMG0.jpg" alt="사진" className='d-block img-fluid' /></span>
-            <span><img src="/img/IMG1.jpg" alt="사진" className='d-block img-fluid' /></span>
+          <div className='col-md-5 pe-0 position-relative'>
+            <span className='position-relative'>
+              <img src="/img/IMG0.jpg" alt="사진" className='d-block img-fluid' />
+              <GoHeartFill className="icon position-absolute" />
+              </span>
+            <span className='position-relative'>
+              <img src="/img/IMG1.jpg" alt="사진" className='d-block img-fluid' />
+              <GoHeartFill className='icon position-absolute' />
+              </span>
           </div>
 
-          <div className='col-md-6 ps-1'>
-            <span><img src="/img/IMG2.jpg" alt="사진" className='img-fluid' /></span>
+          <div className='col-md-6 ps-1 position-relative'>
+            <span className='position-relative'>
+              <img src="/img/IMG2.jpg" alt="사진" className='img-fluid' />
+              <GoHeartFill className='icon position-absolute' />
+              </span>
           </div>
         </div>
 
@@ -28,7 +36,7 @@ function Instagram() {
               사물의 고유한 특성을 제시하고자 했던<br />
               미니멀리스트의 정신을 존중합니다.
             </p>
-            <Link to="/">VISIT INSTAGRAM</Link>
+            <a href='https://www.instagram.com/abib.official/'>VISIT INSTAGRAM</a>
           </div>
         </div>
 

@@ -32,16 +32,15 @@ function App() {
             <SwiperBanner swiperData={db.swiper.main}></SwiperBanner>
             <Categorycom categoryData={db.category} ></Categorycom>
             <Best bestData={db.products}></Best>
-            <Brand brandData={db.brandstory}></Brand>
+            <Brand brandData={db.brand.brandMain}></Brand>
             <Sns></Sns>
             <Apply></Apply>
-            <Footer></Footer>
           </>
         }>
         </Route>
-        
         <Route path='/brand' element={<BrandStory />}></Route>
       </Routes >
+      <Footer></Footer>
 
     </div >
   );

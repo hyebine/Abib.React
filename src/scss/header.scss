@@ -21,13 +21,15 @@ $enfont: "Roboto";
 
   .menu_a {
     color: $activeColor !important;
-    line-height: 70px !important;
+    line-height: 70px;
 
     &:hover {
       color: $basicColor !important;
     }
 
-
+    @media (max-width:990px) {
+      line-height: 0;
+    }
 
   }
 
@@ -144,7 +146,8 @@ header {
             color: $basicWcolor;
 
             @media (max-width:990px) {
-              color: $basicColor;
+              color: $activeColor ;
+
               line-height: 0;
 
               &:hover {
