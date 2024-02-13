@@ -40,8 +40,18 @@ function Header(props) {
 
 
   const SubMenu = (idx) => {
-    const subUl = document.querySelector(`.sub${idx}`);
-    subUl && subUl.classList.toggle("act");
+    const subUls = document.querySelectorAll(".sub_ul");
+
+    subUls.forEach((ele, eidx) => {
+      if (eidx === idx) {
+        ele.classList.toggle("act");
+      } else {
+        ele.classList.remove("act")
+      }
+
+    })
+
+
   };
 
 
@@ -82,7 +92,7 @@ function Header(props) {
                     </Link>
                     {
                       el.sub.length > 0 &&
-                      <ul className={`sub_ul sub${idx} zup position-absolute`}>
+                      <ul className={`sub_ul zup position-absolute `}>
                         {
                           el.sub.map((eel, iidx) => {
                             return (

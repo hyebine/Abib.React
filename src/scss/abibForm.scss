@@ -42,7 +42,7 @@ $darkColor : #272B28;
 
       input {
         flex-grow: 1;
-        max-width: 200px;
+        max-width: 230px;
         outline: 0;
         padding: 4px 10px;
         border: 1px solid $activeColor;
@@ -65,7 +65,8 @@ $darkColor : #272B28;
 
 
       textarea {
-        max-width: 200px;
+        width: 230px;
+        max-width: 230px;
 
         outline: 0;
         padding: 4px 10px;

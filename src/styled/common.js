@@ -10,3 +10,15 @@ font-weight: 400;
     }
 
 `;
+
+
+export const MainH3 = styled.h3`
+text-align: center;
+font-size: 40px;
+font-weight: 400;
+
+@media (max-width:990px) {
+      font-size: 30px;
+    }
+
+`;

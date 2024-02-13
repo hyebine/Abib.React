@@ -64,13 +64,13 @@
             },
             {
               "nm": "세트",
-              "href": "#"
+              "href": "set"
             }
           ]
         },
         {
           "nm": "EVENT",
-          "href": "#",
+          "href": "event",
           "sub": []
         },
         {
@@ -94,7 +94,7 @@
         "txt": "매주 구매 인증을 해주시는 고객님들께 | 선착순 50분께 ‘어성초 토너’를 증정",
         "day": "2024.01.01 ~ 01.26",
         "bg": "/img/banner1.jpg",
-        "href": "#"
+        "href": "event"
       },
       {
         "id": "2",
@@ -102,7 +102,7 @@
         "txt": "프로모션 기간 동안 구매시, | 1월 미니멀 기프트를 증정",
         "day": "2024.01.01 ~ 01.26",
         "bg": "/img/banner2.jpg",
-        "href": "#"
+        "href": "event"
       },
       {
         "id": "3",
@@ -110,7 +110,7 @@
         "txt": "탄력 & 영양케어 제품 최대 30% 할인 이벤트",
         "day": "2024.01.01 ~ 01.26",
         "bg": "/img/banner3.jpg",
-        "href": "#"
+        "href": "event"
       },
       {
         "id": "4",
@@ -118,20 +118,20 @@
         "txt": "프로모션 기간 동안 구매시, | 1월 미니멀 기프트를 증정",
         "day": "2024.01.01 ~ 01.26",
         "bg": "/img/banner4.jpg",
-        "href": "#"
+        "href": "event"
       }
     ]
   },
   "category": [
     {
-      "nm": "SALE",
-      "href": "#",
-      "bg": "/img/SALE.jpg"
+      "nm": "SET",
+      "href": "set",
+      "bg": "/img/SET.jpg"
     },
     {
-      "nm": "SET",
+      "nm": "CREAM",
       "href": "#",
-      "bg": "/img/SET.jpg"
+      "bg": "/img/SALE.jpg"
     },
     {
       "nm": "SHEET MASK",
@@ -149,29 +149,61 @@
       "bg": "/img/SUNCARE.jpg"
     }
   ],
-  "products": [
-    {
-      "title": "콜라겐 아이패치부활초 젤리",
-      "txt": "Collagen eye patch Jericho rose jelly",
-      "href": "#",
-      "bg": "/img/jelly0.jpg",
-      "bg2": "/img/jelly1.jpg"
-    },
-    {
-      "title": "약산성 시트 마스크부활초 핏",
-      "txt": "Mild acidic pH sheet mask Jericho rose fit",
-      "href": "#",
-      "bg": "/img/mask0.jpg",
-      "bg2": "/img/mask1.jpg"
-    },
-    {
-      "title": "부활초 크림뉴트리션 튜브",
-      "txt": "Jericho rose crème Nutrition tube",
-      "href": "#",
-      "bg": "/img/tube0.jpg",
-      "bg2": "/img/tube1.jpg"
-    }
-  ],
+  "products": {
+    "best": [
+      {
+        "title": "콜라겐 아이패치부활초 젤리",
+        "txt": "Collagen eye patch Jericho rose jelly",
+        "href": "#",
+        "bg": "/img/jelly0.jpg",
+        "bg2": "/img/jelly1.jpg"
+      },
+      {
+        "title": "약산성 시트 마스크부활초 핏",
+        "txt": "Mild acidic pH sheet mask Jericho rose fit",
+        "href": "#",
+        "bg": "/img/mask0.jpg",
+        "bg2": "/img/mask1.jpg"
+      },
+      {
+        "title": "부활초 크림뉴트리션 튜브",
+        "txt": "Jericho rose crème Nutrition tube",
+        "href": "#",
+        "bg": "/img/tube0.jpg",
+        "bg2": "/img/tube1.jpg"
+      }
+    ],
+    "set": [
+      {
+        "nm": "스킨부스터 키트 아비브 키트",
+        "en": "Skinbooster kit",
+        "txt": "리밸런싱 토너 + 리밸런싱 에멀전",
+        "href": "#",
+        "bg": "https://ibb.co/DV22x7g"
+      },
+      {
+        "nm": "베이직 케어 키트 아비브 키트",
+        "en": "Basic care kit",
+        "txt": "에센스 1ea + 부활초/겔/크림 1ea",
+        "href": "#",
+        "bg": "https://ibb.co/DV22x7g"
+      },
+      {
+        "nm": "어성초 클렌징 키트 아비브 키트",
+        "en": "Heartleaf cleansing kit",
+        "txt": "어성초 오일 + 어성초 스톤 or 어성초 폼",
+        "href": "#",
+        "bg": "https://ibb.co/DV22x7g"
+      },
+      {
+        "nm": "트라이얼 키트 아비브 키트",
+        "en": "Trial kit",
+        "txt": "어성초 토너 30ml + 부활초/겔/크림 30ml",
+        "href": "#",
+        "bg": "https://ibb.co/DV22x7g"
+      }
+    ]
+  },
   "brand": {
     "brandMain": [
       {

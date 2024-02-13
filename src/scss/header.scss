@@ -123,22 +123,36 @@ header {
 
           @media (max-width:990px) {
             padding: 1rem 4rem;
+
+            .menu_a {
+              color: $basicColor;
+            }
+
+            .sub_ul {
+              visibility: visible !important;
+              opacity: 1 !important;
+            }
+
           }
 
           &:last-child {
             padding-right: 0;
           }
 
-          &:hover {
-            .menu_a {
-              color: $basicColor;
+          @media (min-width:991px) {
+            &:hover {
+              .menu_a {
+                color: $basicColor;
+              }
+
+              .sub_ul {
+                visibility: visible;
+                opacity: 1;
+              }
             }
 
-            .sub_ul {
-              visibility: visible;
-              opacity: 1;
-            }
           }
+
 
           .menu_a {
             font-size: 1rem;
@@ -146,7 +160,7 @@ header {
             color: $basicWcolor;
 
             @media (max-width:990px) {
-              color: $activeColor ;
+              color: $basicColor ;
 
               line-height: 0;
 
@@ -170,12 +184,14 @@ header {
 
 
             @media (max-width:990px) {
+              position: unset !important;
 
               display: none;
 
               &.act {
                 display: block;
               }
+
             }
 
 
@@ -199,7 +215,7 @@ header {
 
 
                 a {
-                  padding: 1rem 4rem;
+                  padding: .5rem 0;
 
                 }
               }
