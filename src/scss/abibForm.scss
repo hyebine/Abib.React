@@ -79,6 +79,19 @@ $darkColor : #272B28;
           font-size: 12px;
           font-weight: 300;
         }
+
+       
+      }
+
+
+      span {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        color: $basicColor;
+
+        left: 100%;
+        min-width: 110px;
       }
 
     }
@@ -90,6 +103,16 @@ $darkColor : #272B28;
 
       input {
         accent-color: $basicColor;
+      }
+
+      span {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        color: $basicColor;
+
+        
+        min-width: 110px;
       }
     }
 

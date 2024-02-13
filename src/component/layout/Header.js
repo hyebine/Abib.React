@@ -39,6 +39,8 @@ function Header(props) {
   }, []);
 
 
+  // 모바일 2단메뉴
+
   const SubMenu = (idx) => {
     const subUls = document.querySelectorAll(".sub_ul");
 

@@ -59,8 +59,8 @@
               "href": "#"
             },
             {
-              "nm": "립",
-              "href": "#"
+              "nm": "베스트",
+              "href": "best"
             },
             {
               "nm": "세트",
@@ -154,21 +154,21 @@
       {
         "title": "콜라겐 아이패치부활초 젤리",
         "txt": "Collagen eye patch Jericho rose jelly",
-        "href": "#",
+        "href": "best",
         "bg": "/img/jelly0.jpg",
         "bg2": "/img/jelly1.jpg"
       },
       {
         "title": "약산성 시트 마스크부활초 핏",
         "txt": "Mild acidic pH sheet mask Jericho rose fit",
-        "href": "#",
+        "href": "best",
         "bg": "/img/mask0.jpg",
         "bg2": "/img/mask1.jpg"
       },
       {
         "title": "부활초 크림뉴트리션 튜브",
         "txt": "Jericho rose crème Nutrition tube",
-        "href": "#",
+        "href": "best",
         "bg": "/img/tube0.jpg",
         "bg2": "/img/tube1.jpg"
       }
@@ -179,28 +179,51 @@
         "en": "Skinbooster kit",
         "txt": "리밸런싱 토너 + 리밸런싱 에멀전",
         "href": "#",
-        "bg": "https://ibb.co/DV22x7g"
+        "bg": "https://i.ibb.co/M200YR5/image.png"
       },
       {
         "nm": "베이직 케어 키트 아비브 키트",
         "en": "Basic care kit",
         "txt": "에센스 1ea + 부활초/겔/크림 1ea",
         "href": "#",
-        "bg": "https://ibb.co/DV22x7g"
+        "bg": "https://i.ibb.co/PgzYDSN/image.png"
       },
       {
         "nm": "어성초 클렌징 키트 아비브 키트",
         "en": "Heartleaf cleansing kit",
         "txt": "어성초 오일 + 어성초 스톤 or 어성초 폼",
         "href": "#",
-        "bg": "https://ibb.co/DV22x7g"
+        "bg": "https://i.ibb.co/bsSVcVw/image.png"
       },
       {
         "nm": "트라이얼 키트 아비브 키트",
         "en": "Trial kit",
         "txt": "어성초 토너 30ml + 부활초/겔/크림 30ml",
         "href": "#",
-        "bg": "https://ibb.co/DV22x7g"
+        "bg": "https://i.ibb.co/42TVSGW/image.png"
+      }
+    ],
+    "bestsub" : [
+      {
+        "nm": "콜라겐 아이패치 부활초 젤리",
+        "en": "Collagen eye patch Jericho rose jelly",
+        "txt": "90g / 60ea",
+        "href": "#",
+        "bg": ""
+      },
+      {
+        "nm": "약산성 시트 마스크 부활초 핏",
+        "en": "Mild acidic pH sheet mask Jericho rose fit",
+        "txt": "30ml / 1ea",
+        "href": "#",
+        "bg": ""
+      },
+      {
+        "nm": "부활초 크림 뉴트리션 튜브",
+        "en": "Jericho rose crème Nutrition tube",
+        "txt": "75ml",
+        "href": "#",
+        "bg": ""
       }
     ]
   },
