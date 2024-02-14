@@ -1,16 +1,44 @@
-import React from 'react'
-import { FaArrowUp } from "react-icons/fa6";
-import '../../scss/quick.scss'
+import React, { useState, useEffect } from 'react';
+import { IoIosArrowRoundUp } from "react-icons/io";
+import '../../scss/quick.scss';
+
 
 function Quick() {
+
+  const [showBtn, setShowBtn] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  };
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      setShowBtn(window.scrollY > 80);
+    };
+
+
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+
+    }
+  }, []);
+
+
+
   return (
-    <div className='quickBtn'>
+    <>
+      {showBtn &&
+        <button className='quickBtn' onClick={scrollToTop} >
+          <IoIosArrowRoundUp className='icon' />
+          <span>상단이동</span>
+        </button>
+      }
+    </>
+  );
 
-      <FaArrowUp className='icon d-flex' size={30} />
-      <span>상단이동</span>
-
-    </div>
-  )
 }
 
-export default Quick
+export default Quick;

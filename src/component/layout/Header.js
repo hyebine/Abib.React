@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BsPerson, BsSearch } from "react-icons/bs";
-import { serverapi } from '../../api/api'
+// import { serverapi } from '../../api/api'
 
 import '../../scss/header.scss'
 
@@ -11,7 +11,7 @@ function Header() {
 
   const [toggle, setToggle] = useState(false);
   const [scrollHd, setScrollHd] = useState(false);
-  const [gnbdataarr, setgnbdata] = useState({}); // api 변수
+  // const [gnbdataarr, setgnbdata] = useState({}); // api 변수
 
 
   // 모바일 2단메뉴
@@ -36,20 +36,20 @@ function Header() {
   };
 
 
-  const apireseive = async () => {
+  // const apireseive = async () => {
 
-    const gnbres = await serverapi('gnb');
-    const minires = await serverapi('mini');
+  //   const gnbres = await serverapi('gnb');
+  //   const minires = await serverapi('mini');
 
-    setgnbdata((prevContent) => ({
-      ...prevContent, // 이전의 값
-      mini: [...minires.data],
-      gnb: [...gnbres.data], // 새롭게 추가된 값
-    }));
+  //   setgnbdata((prevContent) => ({
+  //     ...prevContent, // 이전의 값
+  //     mini: [...minires.data],
+  //     gnb: [...gnbres.data], // 새롭게 추가된 값
+  //   }));
 
 
 
-  }
+  // }
 
 
   useEffect(() => {
@@ -57,7 +57,7 @@ function Header() {
     //api 실행
 
 
-    apireseive();
+    // apireseive();
 
     // 2단메뉴
     const submenuli = document.querySelectorAll(".submenuis");
@@ -94,11 +94,11 @@ function Header() {
       style={{ backgroundColor: toggle ? '#F8F8F8' : '' }}
     >
 
-      {/* <div className='adtop text-center py-1'>
-        <Link to={`/${gnbdataarr['mini'][0].href && gnbdataarr['mini'][0].href}`}>
+      <div className='adtop text-center py-1'>
+        {/* <Link to={`/${gnbdataarr['mini'][0].href && gnbdataarr['mini'][0].href}`}>
           <span>{gnbdataarr['mini'][0].txt && gnbdataarr['mini'][0].txt}</span>
-        </Link>
-      </div> */}
+        </Link> */}
+      </div>
 
       <div className={`hd container d-flex align-items-center justify-content-between `} >
         <h1 className='logo w-0 position-relative zup'><Link to="/" className='d-block'><img src="/img/logo.png" alt="로고이미지" className='d-block' /></Link></h1>
@@ -111,8 +111,8 @@ function Header() {
 
         <div className='navi d-lg-flex ms-auto ms-lg-0 flex-lg-grow-1 justify-content-between'>
 
-          {/* <ul className={`gnb d-lg-flex flex-grow-1 justify-content-center ${toggle && 'act'} `}>
-            {
+          <ul className={`gnb d-lg-flex flex-grow-1 justify-content-center ${toggle && 'act'} `}>
+            {/* {
               gnbdataarr['gnb'] && gnbdataarr['gnb'].map((el, idx) => {
                 return (
                   <li className={`menu_li position-relative 
@@ -140,8 +140,8 @@ function Header() {
                 )
 
               })
-            }
-          </ul> */}
+            } */}
+          </ul>
 
           <ul className='box d-flex w-0 align-items-center justify-content-end'>
             <li className='pe-3'>

@@ -26,19 +26,19 @@ function Form() {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className='content d-flex justify-content-between align-items-center mt-5 position-relative'>
                                 <label htmlFor="name">이름</label>
-                                <input name='name' type='text' placeholder='이름을 입력하세요.' {...register("name", { required: true })} />
+                                <input type='text' placeholder='이름을 입력하세요.' {...register("name", { required: true })} />
                                 {errors.name && <span className='position-absolute'>이름을 입력하세요.</span>}
                             </div>
 
                             <div className='content d-flex justify-content-between align-items-center position-relative' >
                                 <label htmlFor="phone">연락처</label>
-                                <input name='phone' type='number' placeholder='연락처를 입력하세요.' {...register("phone", { required: true })} />
+                                <input type='number' placeholder='연락처를 입력하세요.' {...register("phone", { required: true })} />
                                 {errors.phone && <span className='position-absolute'>연락처를 입력하세요.</span>}
                             </div>
 
                             <div className='content d-flex justify-content-between align-items-center position-relative'>
                                 <label htmlFor="question">문의사항</label>
-                                <textarea name='question' type='question' placeholder='내용을 입력해주세요.' {...register("question", { required: true })} />
+                                <textarea type='question' placeholder='내용을 입력해주세요.' {...register("question", { required: true })} />
                                 {errors.question && <span className='position-absolute'>내용을 입력하세요.</span>}
                             </div>
 

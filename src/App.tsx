@@ -1,4 +1,5 @@
 // api
+import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -48,7 +49,7 @@ function App() {
 
         <Route path='/brand' element={<BrandStory />}></Route>
         <Route path='/event' element={<EventP />}></Route>
-        <Route path='/set' element={<SetP setData={db.products.set} />}></Route>
+        <Route path='/set' element={<SetP setData={db.products.sets} />}></Route>
 
 
       </Routes >

@@ -2,28 +2,31 @@ $basicColor : #1E1E1E;
 $basicWcolor : #F8F8F8;
 
 .quickBtn {
-  display: flex;
-  position: sticky;
-  z-index: 10;
-  bottom: 40px;
+  position: fixed;
+  bottom: 20px;
   right: 20px;
-  justify-content: flex-end;
+  background-color: $basicWcolor;
+  color: $basicColor;
+  border: 1px solid $basicColor;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
   cursor: pointer;
-
-  
+opacity: .6;
+ 
 
   .icon {
-    display: inline-block;
-    color: $basicColor ;
-    border: 1px solid $basicColor;
-    border-radius: 50%;
-    
-    
-
+    color: $basicWcolor;
   }
 
   span {
     font-size: 0;
   }
+
+
 
 }
