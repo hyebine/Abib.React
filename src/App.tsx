@@ -48,7 +48,7 @@ function App() {
         </Route>
 
         <Route path='/brand' element={<BrandStory />}></Route>
-        <Route path='/event' element={<EventP />}></Route>
+        <Route path='/event' element={<EventP eventData={db.events} />}></Route>
         <Route path='/set' element={<SetP setData={db.products.sets} />}></Route>
 
 

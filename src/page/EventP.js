@@ -3,7 +3,7 @@ import { MainH3 } from '../styled/common'
 import { Link } from 'react-router-dom'
 import '../scss/event.scss'
 
-function EventP() {
+function EventP(props) {
   return (
     <div className='event'>
       <div>
@@ -13,14 +13,18 @@ function EventP() {
 
       <div className='wrapper'>
         <div className='container'>
-          <ul>
-            <li>
-              <Link to={`/`}>
-                <img src="" alt="이벤트이미지" className='img-fluid' />
-              </Link>
-              <p>제목</p>
-              <span>날짜</span>
-            </li>
+          <ul className='row mx-0'>
+            {props.eventData.map((e, i) => (
+              <li className='eventLi col-12 col-lg-6 justify-content-between' key={`event${i}`}>
+                <Link className='bg d-block' to={`/${e.href}`}
+                  style={{
+                    backgroundImage: `url(${e.bg})`
+                  }}>
+                </Link>
+                <p className='title text-center'>{e.title}</p>
+              </li>
+            ))
+            }
           </ul>
         </div>
       </div>

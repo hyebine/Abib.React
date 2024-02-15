@@ -203,7 +203,7 @@
         "bg": "https://i.ibb.co/42TVSGW/image.png"
       }
     ],
-    "bestsub" : [
+    "bestsub": [
       {
         "nm": "콜라겐 아이패치 부활초 젤리",
         "en": "Collagen eye patch Jericho rose jelly",
@@ -237,5 +237,27 @@
         "bg": "/img/brand.jpg"
       }
     ]
-  }
+  },
+  "events": [
+    {
+      "title": "선착순 구매 인증 이벤트",
+      "href": "#",
+      "bg": "/img/banner1.jpg"
+    },
+    {
+      "title": "포토리뷰 이벤트",
+      "href": "#",
+      "bg": "/img/banner2.jpg"
+    },
+    {
+      "title": "탄력 & 영양케어 제품 최대 30% 할인 이벤트",
+      "href": "#",
+      "bg": "/img/banner3.jpg"
+    },
+    {
+      "title": "Promotion Gift",
+      "href": "#",
+      "bg": "/img/banner4.jpg"
+    }
+  ]
 }

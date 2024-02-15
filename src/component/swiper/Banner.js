@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { EffectFade, Pagination, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import MainStyle from '../../scss/Banner.module.scss';
+
+
+import { serverapi } from '../../api/api'
 
 
 import 'swiper/css';
@@ -10,8 +13,40 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
 
+
+
 function Banner(props) {
 
+const [gnbdataarr, setgnbdata] = useState({}); // api 변수 
+const apireseive = async (tn) => {
+  try {
+
+  const reqres = await serverapi(tn);
+
+
+  setgnbdata((prevContent) => ({
+    ...prevContent, // 이전의 값
+    [tn] : [...reqres.data],
+    
+  }));
+
+  console.log(gnbdataarr)
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+useEffect(()=>{
+  apireseive('main'); 
+}, [])
+
+useEffect(()=>{
+  console.log(gnbdataarr)  
+  //랜더링되는 함수 넣지않기
+
+}, [gnbdataarr])
   return (
 
 
@@ -36,7 +71,7 @@ function Banner(props) {
 
       >
         {
-          props.swiperData.map((el, i) =>
+           gnbdataarr['main'] && gnbdataarr['main'].map((el, i) =>
           (
             <SwiperSlide className={MainStyle.bannerSlide} key={el.id}>
               <div

@@ -3,11 +3,35 @@ $basicWcolor : #F8F8F8;
 $activeColor : #999999;
 
 
-.event{
-  margin: 12rem 0;
+.event {
+  margin-top: 13rem;
 
-  .subtxt{
-    font-size: 14px;
-    font-weight: 400;
+  .subtxt {
+    font-size: 1rem;
+    font-weight: 500;
+
+    margin-bottom: 7rem;
+  }
+
+  .eventLi {
+
+    margin-bottom: 7rem;
+
+    .bg {
+
+      width: 100%;
+      height: 100vw;
+      max-height: 450px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 100%;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 1rem;
+    }
+
   }
 }
