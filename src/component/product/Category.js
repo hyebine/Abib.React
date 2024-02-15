@@ -16,7 +16,7 @@ function Categorycom(props) {
   
     const reqres = await serverapi(tn);
   
-  
+
     setgnbdata((prevContent) => ({
       ...prevContent, // 이전의 값
       [tn] : [...reqres.data],
