@@ -43,6 +43,25 @@ header {
 
   border-bottom: 1px solid $basicWcolor;
 
+  @media (min-width:991px) {
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      height: 0;
+      background-color: rgba($basicWcolor, $alpha: 0.5);
+    }
+
+
+    &.showback::before {
+      height: 350px;
+    }
+  }
+
+
   // 상단배너
   .adtop {
     background-color: $darkColor;
@@ -61,6 +80,7 @@ header {
 
   // 네비게이션
   .hd {
+
 
     @media (max-width:990px) {
       padding: 1rem 0;
@@ -97,23 +117,6 @@ header {
         }
 
 
-        @media (min-width:991px) {
-
-          &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 100%;
-            height: 0;
-            background-color: rgba($basicWcolor, $alpha: 0.5);
-          }
-
-
-          &.showback::before {
-            height: 350px;
-          }
-        }
 
 
         .menu_li {

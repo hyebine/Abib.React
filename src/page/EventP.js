@@ -1,9 +1,52 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { MainH3 } from '../styled/common'
 import { Link } from 'react-router-dom'
+
+
+import { serverapi } from '../api/api'
+
+
+
 import '../scss/event.scss'
 
 function EventP(props) {
+
+  const [gnbdataarr, setgnbdata] = useState({}); // api 변수
+
+  const apireseive = async (tn) => {
+    try {
+  
+    const reqres = await serverapi(tn);
+  
+  
+    setgnbdata((prevContent) => ({
+      ...prevContent, // 이전의 값
+      [tn] : [...reqres.data],
+      
+    }));
+  
+    console.log(gnbdataarr)
+  
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+  useEffect(()=>{
+    apireseive('events'); 
+  }, [])
+  
+  useEffect(()=>{
+    console.log(gnbdataarr)  
+    //랜더링되는 함수 넣지않기
+  
+  }, [gnbdataarr])
+
+
+
+
+
   return (
     <div className='event'>
       <div>
@@ -14,7 +57,7 @@ function EventP(props) {
       <div className='wrapper'>
         <div className='container'>
           <ul className='row mx-0'>
-            {props.eventData.map((e, i) => (
+            {gnbdataarr['events'] && gnbdataarr['events'].map((e, i) => (
               <li className='eventLi col-12 col-lg-6 justify-content-between' key={`event${i}`}>
                 <Link className='bg d-block' to={`/${e.href}`}
                   style={{
