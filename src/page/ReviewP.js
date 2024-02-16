@@ -16,29 +16,29 @@ function ReviewP() {
       </div>
 
       <div className='wrapper'>
-        <span className='line d-block'></span>
+        <div className='line'></div>
         <div className='container'>
-          <ul className='d-flex justify-content-between flex-nowrap text-center'>
-            <li>
+          <div className='cttBox d-flex justify-content-between flex-nowrap text-center py-3'>
+            <div className='content'>
               <p>베스트리뷰</p>
-              <span>베스트 리뷰 선정 시 <strpng>10,000</strpng>P 적립</span>
-            </li>
-            <li>
+              <span>베스트 리뷰 선정 시 <strong>10,000</strong>P 적립</span>
+            </div>
+            <div className='content'>
               <p>포토리뷰</p>
-              <span>제품사진과 텍스트 50자 이상의 리뷰 <strpng>1,000</strpng>P 적립</span>
-            </li>
-            <li>
+              <span>제품사진과 텍스트 50자 이상의 리뷰 <strong>1,000</strong>P 적립</span>
+            </div>
+            <div className='content'>
               <p>일반리뷰</p>
-              <span>텍스트 20자 이상의 리뷰 <strpng>500</strpng>P 적립</span>
-            </li>
-          </ul>
+              <span>텍스트 20자 이상의 리뷰 <strong>500</strong>P 적립</span>
+            </div>
+          </div>
         </div>
-        <span className='line d-block'></span>
+        <div className='line'></div>
 
 
-        <p className='btn d-flex justify-content-center'>
-          <Link to="/" className='d-block'>READ MORE</Link>
-        </p>
+        <div className='btn d-flex justify-content-center'>
+          <Link to="/" className='btnA d-block'>READ MORE</Link>
+        </div>
       </div>
     </div>
   )

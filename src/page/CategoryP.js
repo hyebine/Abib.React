@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 
 import { serverapi } from '../api/api'
 
-import '../scss/set.scss'
+import '../scss/categoryP.scss'
 
 
 

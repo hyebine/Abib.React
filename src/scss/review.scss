@@ -18,14 +18,28 @@ $basicWcolor : #F8F8F8;
   }
 
   .line {
-    border: 1px solid $basicColor;
+    border-bottom: 1px solid $basicColor;
   }
 
-  ul {
-    padding: 6rem 0;
+  .cttBox {
 
-    li {
+
+    .content {
       line-height: 2;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &:first-of-type {
+        border-right: 1px solid rgba($basicColor, $alpha: 0.2);
+        padding-right: 5rem;
+      }
+
+      &:last-of-type {
+        border-left: 1px solid rgba($basicColor, $alpha: 0.2);
+        padding-left: 5rem;
+      }
 
       p {
         font-size: 1.2rem;
@@ -46,7 +60,7 @@ $basicWcolor : #F8F8F8;
 
     margin: 7rem 0;
 
-    a {
+    .btnA {
       font-size: 14px;
       border: 1.2px solid $basicColor;
       padding: 0.4rem 7rem;
