@@ -77,21 +77,19 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    console.log(gnbdataarr)
+    // console.log(gnbdataarr)
     //랜더링되는 함수 넣지않기
     const submenuli = document.querySelectorAll(".submenuis");
     const gnb = document.querySelector("header")
 
-    console.log(submenuli, gnb)
-
     submenuli.forEach((ele) => {
       ele.addEventListener('mouseenter', () => {
         gnb.classList.add("showback")
-        console.log(ele)
+
       })
       ele.addEventListener('mouseleave', () => {
         gnb.classList.remove("showback")
-        console.log(ele)
+
       });
     });
 

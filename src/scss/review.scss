@@ -1,0 +1,62 @@
+$basicColor : #1E1E1E;
+$basicWcolor : #F8F8F8;
+
+.review {
+
+  .hdbg {
+    max-height: 499px;
+    height: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  .title {
+    line-height: 2;
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+  }
+
+  .line {
+    border: 1px solid $basicColor;
+  }
+
+  ul {
+    padding: 6rem 0;
+
+    li {
+      line-height: 2;
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      span {
+        strong {
+          font-weight: 500;
+        }
+      }
+    }
+
+  }
+
+
+  .btn {
+
+    margin: 7rem 0;
+
+    a {
+      font-size: 14px;
+      border: 1.2px solid $basicColor;
+      padding: 0.4rem 7rem;
+
+      &:hover {
+        background-color: rgba($basicColor, $alpha: 0.2);
+        color: $basicWcolor;
+      }
+    }
+  }
+
+
+}

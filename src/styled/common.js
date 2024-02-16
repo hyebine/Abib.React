@@ -22,3 +22,9 @@ font-weight: 400;
     }
 
 `;
+
+export const MainP = styled.p`
+text-align: center;
+font-size: 1rem;
+font-weight: 500;
+`;

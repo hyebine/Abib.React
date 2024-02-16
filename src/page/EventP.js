@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { MainH3 } from '../styled/common'
 import { Link } from 'react-router-dom'
 
-
 import { serverapi } from '../api/api'
-
-
 
 import '../scss/event.scss'
 

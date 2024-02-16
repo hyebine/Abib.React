@@ -12,13 +12,14 @@ import Brand from './component/main/Brand'
 import Sns from './component/main/Instagram'
 import Apply from './component/main/Form'
 import Footer from './component/layout/Footer'
-import Quick from 'component/layout/Quick';
+import Quick from 'component/layout/Quick'
 
 // page
 import BrandStory from './page/BrandStory'
 import EventP from './page/EventP'
-import SetP from './page/SetP'
-
+import CategoryP from './page/CategoryP'
+import ReviewP from 'page/ReviewP'
+import MembershipP from 'page/MembershipP'
 
 // data
 import db from './data/db.json'
@@ -32,7 +33,7 @@ import './scss/style.scss'
 function App() {
   return (
     <div className="App">
-      <Header ></Header>
+      <Header></Header>
       <Routes>
         <Route path='/' element={
           <>
@@ -47,10 +48,16 @@ function App() {
         }>
         </Route>
 
+        {/* BRAND */}
         <Route path='/brand' element={<BrandStory />}></Route>
-        <Route path='/event' element={<EventP eventData={db.events} />}></Route>
-        <Route path='/set' element={<SetP setData={db.products.sets} />}></Route>
 
+        {/* PRODUCT */}
+        <Route path='/product/:cateid' element={<CategoryP />}></Route>
+
+        {/* gnb page */}
+        <Route path='/event' element={<EventP eventData={db.events} />}></Route>
+        <Route path='/review' element={<ReviewP />}></Route>
+        <Route path='/membership' element={<MembershipP />}></Route>
 
       </Routes >
       <Footer></Footer>
