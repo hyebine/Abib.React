@@ -3,7 +3,7 @@ import { IoIosArrowRoundUp } from "react-icons/io";
 import '../../scss/quick.scss';
 
 
-function Quick() {
+const Quick: React.FC = () => {
 
   const [showBtn, setShowBtn] = useState(false);
 

@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import * as React from 'react';
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BsPerson, BsSearch } from "react-icons/bs";
+
+
+
 //비동기요청 모듈
 /* 실행식은 아래와 같음
    1. 폼전송 post serverapi(테이블이름, 폼데이터)
@@ -10,19 +14,27 @@ import { BsPerson, BsSearch } from "react-icons/bs";
    5. 글삭제 post serverapi(테이블이름/id/d) 
 */
 import { serverapi } from '../../api/api'
+import { Apiall } from '../../ts/common'
+
+// export interface Apignbmini {
+//   id: number;
+//   nm: string;
+//   href: string;
+//   parent_id?: number;
+// }
 
 import '../../scss/header.scss'
 
-function Header() {
-  const [toggle, setToggle] = useState(false);
-  const [scrollHd, setScrollHd] = useState(false);
-  const [gnbdataarr, setgnbdata] = useState({}); // api 변수
+const Header: React.FC = () => {
+  const [toggle, setToggle] = useState<boolean>(false);
+  const [scrollHd, setScrollHd] = useState<boolean>(false);
+  const [gnbdataarr, setgnbdata] = useState<{ [key: string]: Apiall[] } | null>(null); // api 변수
 
 
   // 모바일 2단메뉴
-  const SubMenu = (idx) => {
+  const SubMenu = (idx: number): void => {
     const subUls = document.querySelectorAll(".sub_ul");
-    subUls.forEach((ele, eidx) => {
+    subUls?.forEach((ele, eidx) => {
       if (eidx === idx) {
         ele.classList.toggle("act");
       } else {
@@ -38,24 +50,26 @@ function Header() {
 
 
 
-  const apireseive = async (tn) => {
+  const apireseive = async (tn: string): Promise<void> => {
     try {
-
       const reqres = await serverapi(tn);
-
-
-      setgnbdata((prevContent) => ({
-        ...prevContent, // 이전의 값
-        [tn]: [...reqres.data],
-
-      }));
-
-      console.log(gnbdataarr)
-
-    } catch (error) {
+  
+      if ('data' in reqres) {
+        // Response is not an error
+        setgnbdata((prevContent) => ({
+          ...prevContent,
+          [tn]:[...reqres.data],
+        }));
+      } else {
+        // Response is an error
+        console.log(reqres); // Log or handle the error
+      }
+  
+      console.log(gnbdataarr);
+    } catch (error : any) {
       console.log(error);
     }
-  }
+  };
 
 
   useEffect(() => {

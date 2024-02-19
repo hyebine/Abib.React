@@ -1,11 +1,20 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
-export const serverapi = async (tablenminfo, data = null) => {
+import { Apiall } from '../ts/common'
 
-  const crudinfoarr = tablenminfo.split('/');
-  const tablenm = crudinfoarr[0]; //테이블이름
-  const pk = crudinfoarr[1] ? crudinfoarr[1] : null; // pk번호
-  const crud = crudinfoarr[2] ? crudinfoarr[2] : null; //상태
+
+
+export const serverapi = async (tablenminfo: string, data: FormData | null = null): Promise<AxiosResponse<Apiall> | Error> => {
+
+  // const crudinfoarr = tablenminfo.split('/');
+  // const tablenm = crudinfoarr[0]; //테이블이름
+  // const pk = crudinfoarr[1] ? crudinfoarr[1] : null; // pk번호
+  // const crud = crudinfoarr[2] ? crudinfoarr[2] : null; //상태
+
+
+
+
+
 
   // 요청주소 /api/테이블이름/insert와 select제외한 curd 변수넣기
   /* 실행식은 아래와 같음
@@ -17,42 +26,45 @@ export const serverapi = async (tablenminfo, data = null) => {
   */
   try {
 
+    const [, pk = null, crud = null] = tablenminfo.split('/');
+    console.log('Primary key:', pk);
+
     if (data) {
       //글삽입 폼전송과 글 수정 모두 data가 있음 
 
-      const response = await axios.post(`/api/${crudinfoarr}`, {
+      const response = await axios.post<Apiall>(`/api/${tablenminfo}`, {
         headers: { "Content-Type": "multipart/form-data" },
         body: data
       });
 
-
       console.log("리액트 api 전달받음", response); // chat!! here this is full data
       return response;
       // check ok
-
-
-
-
     }
 
     else {
       //글보기, 목록
       if (crud === "d") {
         //글삭제  테이블이름/id/crud
-        return await axios.post(`/api/${crudinfoarr}`,
-          { headers: { "Content-Type": "application/json", } });
+        return await axios.post<Apiall>(`/api/${tablenminfo}`,
+          { headers: { "Content-Type": "multipart/form-data", } });
       } else {
         //글보기와 글목록
-        return await axios.get(`/api/${crudinfoarr}`);
+        return await axios.get<Apiall>(`/api/${tablenminfo}`);
       }
 
 
 
     }
 
-  } catch (error) {
+  } catch (error: any) {
     console.error("서버요청에 대한 응답에러:", error);
+    return error;
+
   }
 
 }
+
+
+
 

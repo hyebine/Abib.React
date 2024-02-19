@@ -1,9 +1,10 @@
 // api
+import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 
 // component
-import Header from './component/layout/Header';
+import Header from './component/layout/Header'
 import SwiperBanner from './component/swiper/Banner'
 import Categorycom from './component/product/Category'
 import Best from './component/product/BestProduct'
@@ -11,30 +12,36 @@ import Brand from './component/main/Brand'
 import Sns from './component/main/Instagram'
 import Apply from './component/main/Form'
 import Footer from './component/layout/Footer'
-import Quick from 'component/layout/Quick'
+import Quick from './component/layout/Quick'
 
 // page
 import BrandStory from './page/BrandStory'
 import EventP from './page/EventP'
 import CategoryP from './page/CategoryP'
-import ReviewP from 'page/ReviewP'
-import MembershipP from 'page/MembershipP'
-import * as React from 'react';
+import ReviewP from './page/ReviewP'
+import MembershipP from './page/MembershipP'
+
 // data
-
 import db from './data/db.json'
-
 
 // css
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/style.scss'
 
 
-function App() {
+
+
+
+
+const App: React.FC = () => {
+
+
+
   return (
     <div className="App">
       <Header></Header>
       <Routes>
+
         <Route path='/' element={
           <>
             <SwiperBanner swiperData={db.swiper.main}></SwiperBanner>

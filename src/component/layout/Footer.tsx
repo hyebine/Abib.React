@@ -5,7 +5,7 @@ import '../../scss/footer.scss'
 
 
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <div className='ft'>
       <div className="wrapper d-flex container justify-content-between align-items-center py-2">
