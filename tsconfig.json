@@ -1,30 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react",
-    "incremental": true,
-    "baseUrl": "src"
- 
-
+    "target": "ES2015",                    
+    "module": "ESNext",               
+    "lib": ["ESNext", "DOM"], 
+    "moduleResolution": "node",   
+    "jsx": "react", 
+    "strict": true,                      
+    "esModuleInterop": true,            
+    "skipLibCheck": true,                
+    "forceConsistentCasingInFileNames": true  
   },
   "include": [
-    "src/**/*"
+    "src/**/*"                         
+  ],
+  "exclude": [
+    "node_modules",
+    "build"                     
   ]
 }

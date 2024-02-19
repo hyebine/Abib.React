@@ -1,5 +1,4 @@
 // api
-import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -20,8 +19,9 @@ import EventP from './page/EventP'
 import CategoryP from './page/CategoryP'
 import ReviewP from 'page/ReviewP'
 import MembershipP from 'page/MembershipP'
-
+import * as React from 'react';
 // data
+
 import db from './data/db.json'
 
 
