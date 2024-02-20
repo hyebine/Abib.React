@@ -7,7 +7,7 @@ import { serverapi } from '../../api/api'
 
 import '../../scss/category.scss'
 
-function Categorycom(props) {
+function Categorycom() {
 
   const [gnbdataarr, setgnbdata] = useState({}); // api 변수
   

@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 
 
 
-function Banner(props) {
+function Banner() {
 
 const [gnbdataarr, setgnbdata] = useState({}); // api 변수 
 const apireseive = async (tn) => {
@@ -50,7 +50,7 @@ useEffect(()=>{
   return (
 
 
-    <div className={`chbswiper ${MainStyle.banner} ${props.className}`} >
+    <div className={`chbswiper ${MainStyle.banner}`} >
 
       <Swiper
         className='position-relative'

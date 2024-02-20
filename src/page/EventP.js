@@ -6,7 +6,7 @@ import { serverapi } from '../api/api'
 
 import '../scss/event.scss'
 
-function EventP(props) {
+function EventP() {
 
   const [gnbdataarr, setgnbdata] = useState({}); // api 변수
 

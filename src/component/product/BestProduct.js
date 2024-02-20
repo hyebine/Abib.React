@@ -8,7 +8,7 @@ import { serverapi } from '../../api/api'
 
 import '../../scss/best.scss'
 
-function BestProduct(props) {
+function BestProduct() {
   const [gnbdataarr, setgnbdata] = useState({}); // api 변수
   
   const apireseive = async (tn) => {

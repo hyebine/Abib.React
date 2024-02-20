@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'
-import axios from 'axios';
 import '../../scss/abibForm.scss'
 
 function Form() {
+
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        question: '',
+        agreement: null
+    });
 
     const {
         register,

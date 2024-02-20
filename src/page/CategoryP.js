@@ -9,7 +9,7 @@ import '../scss/categoryP.scss'
 
 
 
-function CategoryP(props) {
+function CategoryP() {
 
   const [gnbdataarr, setgnbdata] = useState({}); // api 변수
   const { cateid } = useParams("cateid"); // { cateid : 8 }
@@ -52,20 +52,25 @@ function CategoryP(props) {
 
 
   return (
-    <div className='set'>
+    <div className='cateP'>
 
-      <div className='hdbg' style={{
-        backgroundImage: `url(/img/setbg.jpg)`
-      }}>
-      </div>
+      {
+        gnbdataarr && gnbdataarr['gnb'] && gnbdataarr['gnb'].find(item => item.id == cateid) && (
+          <div className='hdbg' style={{
+            backgroundImage: `url(${gnbdataarr['gnb'].find(item => item.id == cateid).bg})`
+          }}>
+          </div>
+        )
+      }
       <div className='mt-5'>
+
         <MainH3>
           {
-            gnbdataarr && gnbdataarr['gnb'] && gnbdataarr['gnb'].filter((item) => item.id == cateid).map((e, i) => {
-              return e.nm;
-            })
+            gnbdataarr && gnbdataarr['gnb'] && gnbdataarr['gnb'].find(item => item.id == cateid) && gnbdataarr['gnb'].find(item => item.id == cateid).nm
           }
         </MainH3>
+
+
       </div>
 
       <div className='wrapper'>

@@ -1,5 +1,4 @@
 // api
-import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -12,17 +11,18 @@ import Brand from './component/main/Brand'
 import Sns from './component/main/Instagram'
 import Apply from './component/main/Form'
 import Footer from './component/layout/Footer'
-import Quick from 'component/layout/Quick'
+import Quick from './component/layout/Quick'
 
 // page
 import BrandStory from './page/BrandStory'
 import EventP from './page/EventP'
 import CategoryP from './page/CategoryP'
-import ReviewP from 'page/ReviewP'
-import MembershipP from 'page/MembershipP'
+import ReviewP from './page/ReviewP'
+import MembershipP from './page/MembershipP'
 
-// data
-import db from './data/db.json'
+// data 비동기연결전
+import db from './data/db.json'  
+
 
 
 // css
@@ -37,10 +37,10 @@ function App() {
       <Routes>
         <Route path='/' element={
           <>
-            <SwiperBanner swiperData={db.swiper.main}></SwiperBanner>
-            <Categorycom categoryData={db.category} ></Categorycom>
-            <Best bestData={db.products.best}></Best>
-            <Brand brandData={db.brand.brandMain}></Brand>
+            <SwiperBanner></SwiperBanner>
+            <Categorycom></Categorycom>
+            <Best></Best>
+            <Brand></Brand>
             <Sns></Sns>
             <Apply></Apply>
             <Quick></Quick>
@@ -55,7 +55,7 @@ function App() {
         <Route path='/product/:cateid' element={<CategoryP />}></Route>
 
         {/* gnb page */}
-        <Route path='/event' element={<EventP eventData={db.events} />}></Route>
+        <Route path='/event' element={<EventP />}></Route>
         <Route path='/review' element={<ReviewP />}></Route>
         <Route path='/membership' element={<MembershipP />}></Route>
 

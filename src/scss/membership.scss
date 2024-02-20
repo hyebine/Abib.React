@@ -1,7 +1,67 @@
 $basicColor : #1E1E1E;
 $basicWcolor : #F8F8F8;
 
-.membership{
+.membership {
 
-  
+  .hdbg {
+    max-height: 499px;
+    height: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .title {
+    line-height: 2;
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+  }
+
+  .cttBox {
+
+    @media (max-width:990px) {
+      flex-direction: column;
+    }
+
+    .content {
+      width: 290px;
+      height: 306px;
+      border: 1px solid $basicColor;
+
+      @media (max-width:990px) {
+        margin-bottom: 2rem;
+      }
+
+      img {
+        padding-bottom: 1rem;
+      }
+
+      p {
+        font-weight: 500;
+      }
+
+      span {
+        strong {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .btn {
+
+    margin: 7rem 0;
+    padding: unset;
+
+    .btnA {
+      font-size: 14px;
+      border: 1.2px solid $basicColor;
+      padding: 0.4rem 7rem;
+
+      &:hover {
+        background-color: rgba($basicColor, $alpha: 0.2);
+        color: $basicWcolor;
+      }
+    }
+  }
+
 }

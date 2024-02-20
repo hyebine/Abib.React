@@ -8,7 +8,7 @@ import { serverapi } from '../../api/api'
 
 import '../../scss/brand.scss'
 
-function Brand(props) {
+function Brand() {
 
   const [gnbdataarr, setgnbdata] = useState({}); // api 변수
   
