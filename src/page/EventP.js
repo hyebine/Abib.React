@@ -12,32 +12,32 @@ function EventP() {
 
   const apireseive = async (tn) => {
     try {
-  
-    const reqres = await serverapi(tn);
-  
-  
-    setgnbdata((prevContent) => ({
-      ...prevContent, // 이전의 값
-      [tn] : [...reqres.data],
-      
-    }));
-  
-    console.log(gnbdataarr)
-  
+
+      const reqres = await serverapi(tn);
+
+
+      setgnbdata((prevContent) => ({
+        ...prevContent, // 이전의 값
+        [tn]: [...reqres.data],
+
+      }));
+
+      console.log(gnbdataarr)
+
     } catch (error) {
       console.log(error);
     }
   }
 
 
-  useEffect(()=>{
-    apireseive('events'); 
+  useEffect(() => {
+    apireseive('events');
   }, [])
-  
-  useEffect(()=>{
-    console.log(gnbdataarr)  
+
+  useEffect(() => {
+    console.log(gnbdataarr)
     //랜더링되는 함수 넣지않기
-  
+
   }, [gnbdataarr])
 
 

@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'
 import '../../scss/abibForm.scss'
+import { serverapi } from '../../api/api'
+
 
 function Form() {
-
-    const [formData, setFormData] = useState({
-        name: '',
-        phone: '',
-        question: '',
-        agreement: null
-    });
 
     const {
         register,
@@ -17,7 +12,18 @@ function Form() {
         formState: { errors },
     } = useForm()
 
-    const onSubmit = (data) => console.log(data)
+    const [gnbdataarr, setgnbdata] = useState(false);
+
+
+    // post
+    const onSubmit = async (data) => {
+
+        const FormPost = await serverapi("apply", data)
+        console.log(FormPost)
+
+        setgnbdata(!gnbdataarr)
+    }
+
 
     return (
 
@@ -50,7 +56,7 @@ function Form() {
 
                             <div className='agree position-relative'>
                                 <label>
-                                    <input type="checkbox" {...register("agreement", { required: true })} /> 개인정보 수집 및 활용동의
+                                    <input type="checkbox" required /> 개인정보 수집 및 활용동의
                                 </label>
                                 {errors.agreement && <span className='position-absolute'>동의가 필요합니다.</span>}
                             </div>

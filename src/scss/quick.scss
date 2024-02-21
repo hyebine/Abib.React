@@ -16,11 +16,12 @@ $basicWcolor : #F8F8F8;
   align-items: center;
   font-size: 2.5rem;
   cursor: pointer;
-opacity: .6;
- 
+  opacity: .6;
 
-  .icon {
-    color: $basicWcolor;
+  &:hover {
+    opacity: 1;
+
+
   }
 
   span {

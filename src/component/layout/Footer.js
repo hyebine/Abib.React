@@ -14,9 +14,9 @@ function Footer() {
             <Link to="/"><img src="/img/f_logo.png" alt="하단로고" /></Link>
           </div>
           <ul className='icons d-flex justify-content-between'>
-            <li><Link to="/"><FaInstagram /></Link></li>
-            <li><Link to="/"><FaFacebook /></Link></li>
-            <li><Link to="/"><FaYoutube /></Link></li>
+            <li><a href="https://www.instagram.com/abib.official/" alt="인스타그램"><FaInstagram /></a></li>
+            <li><a href="https://www.facebook.com/abib.cosmetics/" alt="페이스북"><FaFacebook /></a></li>
+            <li><a href="https://www.youtube.com/@abib6165" alt="유튜브"><FaYoutube /></a></li>
           </ul>
         </div>
 
