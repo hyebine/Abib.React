@@ -16,12 +16,16 @@ function Form() {
 
 
     // post
-    const onSubmit = async (data) => {
+    const onSubmit = async (data, e) => {
 
         const FormPost = await serverapi("apply", data)
         console.log(FormPost)
 
         setgnbdata(!gnbdataarr)
+
+        alert("🖤전송 완료 되었습니다🖤")
+
+        e.target.reset();  //작성한 글 신청하고 사라지기
     }
 
 

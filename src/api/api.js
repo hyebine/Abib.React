@@ -45,9 +45,6 @@ export const serverapi = async (tablenminfo, data = null) => {
         //글보기와 글목록
         return await axios.get(`/api/${crudinfoarr}`);
       }
-
-
-
     }
 
   } catch (error) {

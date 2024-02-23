@@ -30,8 +30,6 @@ const apireseive = async (tn) => {
     
   }));
 
-  console.log(gnbdataarr)
-
   } catch (error) {
     console.log(error);
   }

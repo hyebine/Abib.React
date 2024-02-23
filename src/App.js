@@ -23,8 +23,6 @@ import MembershipP from './page/MembershipP'
 // data 비동기연결전
 import db from './data/db.json'  
 
-
-
 // css
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/style.scss'
