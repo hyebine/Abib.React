@@ -10,7 +10,7 @@ import '../../scss/brand.scss'
 
 function Brand() {
 
-  const [gnbdataarr, setgnbdata] = useState({}); // api 변수
+  const [commonData, setCommonData] = useState({}); // api 변수
   
   const apireseive = async (tn) => {
     try {
@@ -18,13 +18,13 @@ function Brand() {
     const reqres = await serverapi(tn);
   
   
-    setgnbdata((prevContent) => ({
+    setCommonData((prevContent) => ({
       ...prevContent, // 이전의 값
       [tn] : [...reqres.data],
       
     }));
   
-    console.log(gnbdataarr)
+    // console.log(commonData)
   
     } catch (error) {
       console.log(error);
@@ -36,32 +36,32 @@ function Brand() {
   }, [])
   
   useEffect(()=>{
-    console.log(gnbdataarr)  
+    // console.log(commonData)  
     //랜더링되는 함수 넣지않기
   
-  }, [gnbdataarr])
+  }, [commonData])
 
   return (
     <div className='story'>
       <div>
         <div className='bg'
           style={{
-            backgroundImage: `url(${gnbdataarr['brandMain'] && gnbdataarr['brandMain'][0].bg})`
+            backgroundImage: `url(${commonData['brandMain'] && commonData['brandMain'][0].bg})`
           }} >
           <div className='d-flex justify-content-center text-center align-items-center h-100'>
             <div className='content'>
-              <h3>{ gnbdataarr['brandMain'] && gnbdataarr['brandMain'][0].title}</h3>
-              <p className='en'>{gnbdataarr['brandMain'] && gnbdataarr['brandMain'][0].txt}</p>
+              <h3>{ commonData['brandMain'] && commonData['brandMain'][0].title}</h3>
+              <p className='en'>{commonData['brandMain'] && commonData['brandMain'][0].txt}</p>
               <p className='text'>
                 {
-                  gnbdataarr['brandMain'] && gnbdataarr['brandMain'][0].content.split('|').map((e, i) =>
+                  commonData['brandMain'] && commonData['brandMain'][0].content.split('|').map((e, i) =>
                     <React.Fragment key={i}>
                       {e} <br />
                     </React.Fragment>
                   )
                 }
               </p>
-              <Link to={`/${gnbdataarr['brandMain'] && gnbdataarr['brandMain'][0].href}`}>READ MORE</Link>
+              <Link to={`/${commonData['brandMain'] && commonData['brandMain'][0].href}`}>READ MORE</Link>
             </div>
           </div>
         </div>

@@ -12,16 +12,16 @@ function Form() {
         formState: { errors },
     } = useForm()
 
-    const [gnbdataarr, setgnbdata] = useState(false);
+    const [commonData, setCommonData] = useState(false);
 
 
     // post
     const onSubmit = async (data, e) => {
 
         const FormPost = await serverapi("apply", data)
-        console.log(FormPost)
+        // console.log(FormPost)
 
-        setgnbdata(!gnbdataarr)
+        setCommonData(!commonData)
 
 
         e.target.reset();  //작성한 글 신청하고 사라지기
@@ -31,7 +31,7 @@ function Form() {
     return (
         <>
             {
-                gnbdataarr ? <div className='d-flex justify-content-center bg-light p-5'>
+                commonData ? <div className='d-flex justify-content-center bg-light p-5'>
                   🤍🖤  빠른답변 해드리겠습니다 감사합니다. 🤍🖤
                   
                 </div> :

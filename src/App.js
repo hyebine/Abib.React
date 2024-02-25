@@ -1,7 +1,6 @@
 // api
 import { Route, Routes } from 'react-router-dom';
 
-
 // component
 import Header from './component/layout/Header';
 import SwiperBanner from './component/swiper/Banner'
@@ -57,7 +56,7 @@ function App() {
         <Route path='/review' element={<ReviewP />}></Route>
         <Route path='/membership' element={<MembershipP />}></Route>
 
-      </Routes >
+      </Routes>
       <Footer></Footer>
 
     </div>

@@ -8,7 +8,7 @@ import '../scss/event.scss'
 
 function EventP() {
 
-  const [gnbdataarr, setgnbdata] = useState({}); // api 변수
+  const [commonData, setCommonData] = useState({}); // api 변수
 
   const apireseive = async (tn) => {
     try {
@@ -16,13 +16,13 @@ function EventP() {
       const reqres = await serverapi(tn);
 
 
-      setgnbdata((prevContent) => ({
+      setCommonData((prevContent) => ({
         ...prevContent, // 이전의 값
         [tn]: [...reqres.data],
 
       }));
 
-      console.log(gnbdataarr)
+      // console.log(commonData)
 
     } catch (error) {
       console.log(error);
@@ -35,10 +35,10 @@ function EventP() {
   }, [])
 
   useEffect(() => {
-    console.log(gnbdataarr)
+    // console.log(commonData)
     //랜더링되는 함수 넣지않기
 
-  }, [gnbdataarr])
+  }, [commonData])
 
 
 
@@ -54,7 +54,7 @@ function EventP() {
       <div className='wrapper'>
         <div className='container'>
           <ul className='row mx-0'>
-            {gnbdataarr['events'] && gnbdataarr['events'].map((e, i) => (
+            {commonData['events'] && commonData['events'].map((e, i) => (
               <li className='eventLi col-12 col-lg-6 justify-content-between' key={`event${i}`}>
                 <Link className='bg d-block' to={`/${e.href}`}
                   style={{

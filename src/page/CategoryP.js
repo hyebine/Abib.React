@@ -11,7 +11,7 @@ import '../scss/categoryP.scss'
 
 function CategoryP() {
 
-  const [gnbdataarr, setgnbdata] = useState({}); // api 변수
+  const [commonData, setCommonData] = useState({}); // api 변수
   const { cateid } = useParams("cateid"); // { cateid : 8 }
 
   const apireseive = async (tn, cate_id = null) => {
@@ -19,15 +19,15 @@ function CategoryP() {
 
       const reqres = await serverapi(tn, cate_id);
 
-      console.log(reqres)
+      // console.log(reqres)
 
 
-      setgnbdata((prev) => ({
+      setCommonData((prev) => ({
         ...prev,
         [tn]: [...reqres.data]
       }));
 
-      console.log("리액트 컴포넌트 카테고리", gnbdataarr)
+      // console.log("리액트 컴포넌트 카테고리", commonData)
 
     } catch (error) {
       console.log(error);
@@ -36,28 +36,30 @@ function CategoryP() {
 
 
   useEffect(() => {
-    console.log(typeof cateid, cateid)
+    // console.log(typeof cateid, cateid)
+
     apireseive('gnb');
+
     apireseive("products", { cate_id: cateid }).then(() => {
-      console.log("실행하고 온 결과", gnbdataarr)
+      // console.log("실행하고 온 결과", commonData)
     });
 
   }, [cateid])
 
   useEffect(() => {
-    console.log(gnbdataarr)
+    // console.log(commonData)
     //랜더링되는 함수 넣지않기
 
-  }, [gnbdataarr])
+  }, [commonData])
 
 
   return (
     <div className='cateP'>
 
       {
-        gnbdataarr && gnbdataarr['gnb'] && gnbdataarr['gnb'].find(item => item.id == cateid) && (
+        commonData && commonData['gnb'] && commonData['gnb'].find(item => item.id == cateid) && (
           <div className='hdbg' style={{
-            backgroundImage: `url(${gnbdataarr['gnb'].find(item => item.id == cateid).bg})`
+            backgroundImage: `url(${commonData['gnb'].find(item => item.id == cateid).bg})`
           }}>
           </div>
         )
@@ -66,7 +68,7 @@ function CategoryP() {
 
         <MainH3>
           {
-            gnbdataarr && gnbdataarr['gnb'] && gnbdataarr['gnb'].find(item => item.id == cateid) && gnbdataarr['gnb'].find(item => item.id == cateid).nm
+            commonData && commonData['gnb'] && commonData['gnb'].find(item => item.id == cateid) && commonData['gnb'].find(item => item.id == cateid).nm
           }
         </MainH3>
 
@@ -77,7 +79,7 @@ function CategoryP() {
         <div className='container'>
           <ul className='row mx-0'>
             {
-              gnbdataarr && gnbdataarr['products'] && gnbdataarr['products'].map((e, i) => (
+              commonData && commonData['products'] && commonData['products'].map((e, i) => (
                 <li className='setLi col-6 col-lg-4 justify-content-between' key={i}>
 
                   <Link to={`/${e.href}`} className='bg d-block' style={{ backgroundImage: `url(${e.bg})` }}></Link>

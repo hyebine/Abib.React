@@ -9,7 +9,7 @@ import '../../scss/category.scss'
 
 function Categorycom() {
 
-  const [gnbdataarr, setgnbdata] = useState({}); // api 변수
+  const [commonData, setCommonData] = useState({}); // api 변수
   
   const apireseive = async (tn) => {
     try {
@@ -17,13 +17,13 @@ function Categorycom() {
     const reqres = await serverapi(tn);
   
 
-    setgnbdata((prevContent) => ({
+    setCommonData((prevContent) => ({
       ...prevContent, // 이전의 값
       [tn] : [...reqres.data],
       
     }));
   
-    console.log(gnbdataarr)
+    // console.log(commonData)
   
     } catch (error) {
       console.log(error);
@@ -35,10 +35,10 @@ function Categorycom() {
   }, [])
   
   useEffect(()=>{
-    console.log(gnbdataarr)  
+    // console.log(commonData)  
     //랜더링되는 함수 넣지않기
   
-  }, [gnbdataarr])
+  }, [commonData])
 
   
 
@@ -49,7 +49,7 @@ function Categorycom() {
 
       <ul className='d-md-flex'>
         {
-          gnbdataarr['category'] && gnbdataarr['category'].map((e, i) => (
+          commonData['category'] && commonData['category'].map((e, i) => (
             <li className='category_li flex-md-grow-1 position-relative' key={i}>
               <Link to={`/${e.href}`} className='h-100 d-block' style={{
                 backgroundImage: `url(${e.bg})`
