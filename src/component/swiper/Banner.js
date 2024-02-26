@@ -17,14 +17,14 @@ import 'swiper/css/pagination';
 
 function Banner() {
 
-const [commonData, setCommonData] = useState({}); // api 변수 
+const [contentData, setContentData] = useState({}); // api 변수 
 const apireseive = async (tn) => {
   try {
 
   const reqres = await serverapi(tn);
 
 
-  setCommonData((prevContent) => ({
+  setContentData((prevContent) => ({
     ...prevContent, // 이전의 값
     [tn] : [...reqres.data],
     
@@ -41,10 +41,10 @@ useEffect(()=>{
 }, [])
 
 useEffect(()=>{
-  // console.log(commonData)  
+  // console.log(contentData)  
   //랜더링되는 함수 넣지않기
 
-}, [commonData])
+}, [contentData])
   return (
 
 
@@ -69,7 +69,7 @@ useEffect(()=>{
 
       >
         {
-           commonData['main'] && commonData['main'].map((el, i) =>
+           contentData['main'] && contentData['main'].map((el, i) =>
           (
             <SwiperSlide className={MainStyle.bannerSlide} key={el.id}>
               <div

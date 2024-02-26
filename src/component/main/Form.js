@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form'
 import '../../scss/abibForm.scss'
 import { serverapi } from '../../api/api'
@@ -12,28 +12,31 @@ function Form() {
         formState: { errors },
     } = useForm()
 
-    const [commonData, setCommonData] = useState(false);
+    const [formData, setFormData] = useState(false);
 
 
     // post
     const onSubmit = async (data, e) => {
-
         const FormPost = await serverapi("apply", data)
-        // console.log(FormPost)
+        console.log(FormPost)
 
-        setCommonData(!commonData)
+        const isConfirm = window.confirm("상담 예약을 진행하시겠습니까?");
 
+        if (isConfirm) {
 
-        e.target.reset();  //작성한 글 신청하고 사라지기
+            setFormData(true)
+        }
     }
-
 
     return (
         <>
             {
-                commonData ? <div className='d-flex justify-content-center bg-light p-5'>
-                  🤍🖤  빠른답변 해드리겠습니다 감사합니다. 🤍🖤
-                  
+                formData ? <div className='successMsg d-flex justify-content-center flex-column align-items-center p-5'>
+                    🤍🖤  빠른답변 해드리겠습니다 감사합니다. 🤍🖤
+                    <button className='btn' onClick={() => {
+                        setFormData(false)
+                    }}>다시 신청하기</button>
+
                 </div> :
 
 
@@ -41,7 +44,7 @@ function Form() {
                         <div className='wrapper container text-center'>
                             <div>
                                 <h2>상담예약</h2>
-                                <p>고객님의 기본정보를 입력해 주시면 
+                                <p>고객님의 기본정보를 입력해 주시면
                                     <strong>Abib</strong>가 연락드리겠습니다.
                                 </p>
                                 <div className='col-lg-6 col-md-10 mx-auto'>
@@ -78,7 +81,7 @@ function Form() {
                             </div>
                         </div>
                     </div>
-}
+            }
         </>
 
     )

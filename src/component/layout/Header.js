@@ -16,7 +16,7 @@ import '../../scss/header.scss'
 function Header() {
   const [toggle, setToggle] = useState(false); //모바일 메뉴 토글
   const [scrollHd, setScrollHd] = useState(false); //스크롤
-  const [commonData, setCommonData] = useState({}); // api 받은 메뉴 데이터
+  const [gnbData, setGnbData] = useState({}); // api 받은 메뉴 데이터
 
 
   // 모바일 2단메뉴 토글
@@ -41,13 +41,13 @@ function Header() {
       const reqres = await serverapi(tn);
 
 
-      setCommonData((prevContent) => ({
+      setGnbData((prevContent) => ({
         ...prevContent, // 이전의 값
         [tn]: [...reqres.data],
 
       }));
 
-      // console.log(commonData)
+      // console.log(gnbData)
 
     } catch (error) {
       console.log(error);
@@ -97,7 +97,7 @@ function Header() {
       });
     });
 
-  }, [commonData])
+  }, [gnbData])
 
 
 
@@ -108,10 +108,10 @@ function Header() {
     >
       {/* 상단광고 */}
       <div className='adtop text-center py-1'>
-        {commonData['mini'] && commonData['mini'][0] && (
+        {gnbData['mini'] && gnbData['mini'][0] && (
 
-          <Link to={`/${commonData['mini'][0].href}`}>
-            <span>{commonData['mini'][0].txt}</span>
+          <Link to={`/${gnbData['mini'][0].href}`}>
+            <span>{gnbData['mini'][0].txt}</span>
           </Link>
 
         )}
@@ -133,18 +133,18 @@ function Header() {
 
           <ul className={`gnb d-lg-flex flex-grow-1 justify-content-center ${toggle ? 'act' : ""}`}>
             {
-              commonData['gnb'] && commonData['gnb'].map((el, idx) => {
+              gnbData['gnb'] && gnbData['gnb'].map((el, idx) => {
                 return (
                   el.parent_id === null &&
-                  <li className={`menu_li position-relative ${commonData['gnb'].filter((list) => list.parent_id === el.id).length > 0 ? 'submenuis' : ""}`} key={idx} onClick={() => SubMenu(idx)}>
+                  <li className={`menu_li position-relative ${gnbData['gnb'].filter((list) => list.parent_id === el.id).length > 0 ? 'submenuis' : ""}`} key={idx} onClick={() => SubMenu(idx)}>
                     <Link to={`/${el.href}`} className='menu_a'>
                       {el.nm}
                     </Link>
                     {
-                      commonData['gnb'].filter((list) => list.parent_id === el.id).length > 0 &&
+                      gnbData['gnb'].filter((list) => list.parent_id === el.id).length > 0 &&
                       <ul className={`sub_ul zup position-absolute`}>
                         {
-                          commonData['gnb'].filter((list) => list.parent_id === el.id).map((eel, iidx) => {
+                          gnbData['gnb'].filter((list) => list.parent_id === el.id).map((eel, iidx) => {
                             return (
                               <li key={iidx}>
                                 <Link to={`${eel.href}`}>{eel.nm}</Link>

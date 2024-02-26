@@ -4,6 +4,32 @@ $activeColor : #999999;
 $miniColor : #EDE5D8;
 $darkColor : #272B28;
 
+
+
+// 성공 메시지 
+
+.successMsg {
+  margin-top: 5rem;
+  line-height: 5;
+  background-color: #FAFAFA;
+  font-weight: 500;
+
+
+  .btn {
+    width: 10rem;
+    background-color: $activeColor ;
+    color: $basicWcolor;
+    border-radius: 0;
+
+    &:hover {
+      background-color: $basicColor;
+      transition: .5s;
+      color: $basicWcolor;
+    }
+  }
+}
+
+
 .apply {
   margin-top: 170px;
   background-color: #FAFAFA;
@@ -80,7 +106,7 @@ $darkColor : #272B28;
           font-weight: 300;
         }
 
-       
+
       }
 
 
@@ -111,7 +137,7 @@ $darkColor : #272B28;
         font-weight: 600;
         color: $basicColor;
 
-        
+
         min-width: 110px;
       }
     }

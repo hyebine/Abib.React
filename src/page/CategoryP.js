@@ -11,7 +11,7 @@ import '../scss/categoryP.scss'
 
 function CategoryP() {
 
-  const [commonData, setCommonData] = useState({}); // api 변수
+  const [productData, setProductData] = useState({}); // api 변수
   const { cateid } = useParams("cateid"); // { cateid : 8 }
 
   const apireseive = async (tn, cate_id = null) => {
@@ -22,12 +22,12 @@ function CategoryP() {
       // console.log(reqres)
 
 
-      setCommonData((prev) => ({
+      setProductData((prev) => ({
         ...prev,
         [tn]: [...reqres.data]
       }));
 
-      // console.log("리액트 컴포넌트 카테고리", commonData)
+      // console.log("리액트 컴포넌트 카테고리", productData)
 
     } catch (error) {
       console.log(error);
@@ -41,25 +41,25 @@ function CategoryP() {
     apireseive('gnb');
 
     apireseive("products", { cate_id: cateid }).then(() => {
-      // console.log("실행하고 온 결과", commonData)
+      // console.log("실행하고 온 결과", productData)
     });
 
   }, [cateid])
 
   useEffect(() => {
-    // console.log(commonData)
+    // console.log(productData)
     //랜더링되는 함수 넣지않기
 
-  }, [commonData])
+  }, [productData])
 
 
   return (
     <div className='cateP'>
 
       {
-        commonData && commonData['gnb'] && commonData['gnb'].find(item => item.id == cateid) && (
+        productData && productData['gnb'] && productData['gnb'].find(item => item.id == cateid) && (
           <div className='hdbg' style={{
-            backgroundImage: `url(${commonData['gnb'].find(item => item.id == cateid).bg})`
+            backgroundImage: `url(${productData['gnb'].find(item => item.id == cateid).bg})`
           }}>
           </div>
         )
@@ -68,7 +68,7 @@ function CategoryP() {
 
         <MainH3>
           {
-            commonData && commonData['gnb'] && commonData['gnb'].find(item => item.id == cateid) && commonData['gnb'].find(item => item.id == cateid).nm
+            productData && productData['gnb'] && productData['gnb'].find(item => item.id == cateid) && productData['gnb'].find(item => item.id == cateid).nm
           }
         </MainH3>
 
@@ -79,7 +79,7 @@ function CategoryP() {
         <div className='container'>
           <ul className='row mx-0'>
             {
-              commonData && commonData['products'] && commonData['products'].map((e, i) => (
+              productData && productData['products'] && productData['products'].map((e, i) => (
                 <li className='setLi col-6 col-lg-4 justify-content-between' key={i}>
 
                   <Link to={`/${e.href}`} className='bg d-block' style={{ backgroundImage: `url(${e.bg})` }}></Link>

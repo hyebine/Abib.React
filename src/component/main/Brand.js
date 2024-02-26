@@ -10,7 +10,7 @@ import '../../scss/brand.scss'
 
 function Brand() {
 
-  const [commonData, setCommonData] = useState({}); // api 변수
+  const [brandData, setBrandData] = useState({}); // api 변수
   
   const apireseive = async (tn) => {
     try {
@@ -18,13 +18,13 @@ function Brand() {
     const reqres = await serverapi(tn);
   
   
-    setCommonData((prevContent) => ({
+    setBrandData((prevContent) => ({
       ...prevContent, // 이전의 값
       [tn] : [...reqres.data],
       
     }));
   
-    // console.log(commonData)
+    // console.log(brandData)
   
     } catch (error) {
       console.log(error);
@@ -36,32 +36,32 @@ function Brand() {
   }, [])
   
   useEffect(()=>{
-    // console.log(commonData)  
+    // console.log(brandData)  
     //랜더링되는 함수 넣지않기
   
-  }, [commonData])
+  }, [brandData])
 
   return (
     <div className='story'>
       <div>
         <div className='bg'
           style={{
-            backgroundImage: `url(${commonData['brandMain'] && commonData['brandMain'][0].bg})`
+            backgroundImage: `url(${brandData['brandMain'] && brandData['brandMain'][0].bg})`
           }} >
           <div className='d-flex justify-content-center text-center align-items-center h-100'>
             <div className='content'>
-              <h3>{ commonData['brandMain'] && commonData['brandMain'][0].title}</h3>
-              <p className='en'>{commonData['brandMain'] && commonData['brandMain'][0].txt}</p>
+              <h3>{ brandData['brandMain'] && brandData['brandMain'][0].title}</h3>
+              <p className='en'>{brandData['brandMain'] && brandData['brandMain'][0].txt}</p>
               <p className='text'>
                 {
-                  commonData['brandMain'] && commonData['brandMain'][0].content.split('|').map((e, i) =>
+                  brandData['brandMain'] && brandData['brandMain'][0].content.split('|').map((e, i) =>
                     <React.Fragment key={i}>
                       {e} <br />
                     </React.Fragment>
                   )
                 }
               </p>
-              <Link to={`/${commonData['brandMain'] && commonData['brandMain'][0].href}`}>READ MORE</Link>
+              <Link to={`/${brandData['brandMain'] && brandData['brandMain'][0].href}`}>READ MORE</Link>
             </div>
           </div>
         </div>
