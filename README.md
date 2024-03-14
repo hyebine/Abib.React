@@ -2,6 +2,10 @@
 
 Abib 브랜드 페이지
 
+### 배포 주소
+
+https://abib.cafe24app.com/
+
 ### 피그마 주소
 
 https://url.kr/w3up96
